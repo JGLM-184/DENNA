@@ -16,7 +16,9 @@ namespace FormCont
         ControleEstoque controle_estoque;
         CadastroMerc cadastro_merc;
         RelatoriosES relatorios;
-        
+        CurvaABC curva;
+
+
 
         //altera a cor de fundo do formulário container/menu para a cor branca
         public Container()
@@ -124,5 +126,28 @@ namespace FormCont
         {
 
         }
+
+        private void btCurvaABC_Click(object sender, EventArgs e)
+        {
+            if (curva == null)
+            {
+                curva = new CurvaABC();
+                curva.FormClosed += Curva_FormClosed;
+                curva.MdiParent = this;
+                curva.Dock = DockStyle.Fill;
+                curva.Show();
+            }
+            else
+            {
+                curva.Activate();
+            }
+        }
+
+        private void Curva_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            curva = null;
+        }
+
+
     }
 }

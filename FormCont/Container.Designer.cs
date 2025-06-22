@@ -33,11 +33,12 @@
             this.labelRelatorios = new System.Windows.Forms.Label();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.painelLateral = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.bt_deslogar = new System.Windows.Forms.PictureBox();
-            this.kryptonPictureBox1 = new Krypton.Toolkit.KryptonPictureBox();
             this.bt_fechar = new System.Windows.Forms.PictureBox();
             this.bt_configuracoes = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.kryptonPictureBox1 = new Krypton.Toolkit.KryptonPictureBox();
+            this.btCurvaABC = new System.Windows.Forms.Button();
             this.labelCadastro = new System.Windows.Forms.Label();
             this.picSuprimentos = new System.Windows.Forms.PictureBox();
             this.bt_controle_estoque = new System.Windows.Forms.Button();
@@ -46,16 +47,15 @@
             this.bt_relEntradaSaida = new System.Windows.Forms.Button();
             this.bt_nt_entrada = new System.Windows.Forms.Button();
             this.bt_cadastro_merc = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.painelLateral.SuspendLayout();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bt_deslogar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bt_fechar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bt_configuracoes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSuprimentos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picRelatorios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCadastro)).BeginInit();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelSuprimentos
@@ -97,7 +97,7 @@
             this.painelLateral.Controls.Add(this.panel1);
             this.painelLateral.Controls.Add(this.kryptonPictureBox1);
             this.painelLateral.Controls.Add(this.lblUsuario);
-            this.painelLateral.Controls.Add(this.button1);
+            this.painelLateral.Controls.Add(this.btCurvaABC);
             this.painelLateral.Controls.Add(this.labelCadastro);
             this.painelLateral.Controls.Add(this.picSuprimentos);
             this.painelLateral.Controls.Add(this.bt_controle_estoque);
@@ -114,6 +114,17 @@
             this.painelLateral.Size = new System.Drawing.Size(200, 670);
             this.painelLateral.TabIndex = 11;
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.bt_deslogar);
+            this.panel1.Controls.Add(this.bt_fechar);
+            this.panel1.Controls.Add(this.bt_configuracoes);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 621);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(200, 49);
+            this.panel1.TabIndex = 13;
+            // 
             // bt_deslogar
             // 
             this.bt_deslogar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -126,16 +137,6 @@
             this.bt_deslogar.TabIndex = 28;
             this.bt_deslogar.TabStop = false;
             this.bt_deslogar.Click += new System.EventHandler(this.bt_deslogar_Click_1);
-            // 
-            // kryptonPictureBox1
-            // 
-            this.kryptonPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("kryptonPictureBox1.Image")));
-            this.kryptonPictureBox1.Location = new System.Drawing.Point(-1, 12);
-            this.kryptonPictureBox1.Name = "kryptonPictureBox1";
-            this.kryptonPictureBox1.Size = new System.Drawing.Size(71, 36);
-            this.kryptonPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.kryptonPictureBox1.TabIndex = 27;
-            this.kryptonPictureBox1.TabStop = false;
             // 
             // bt_fechar
             // 
@@ -163,24 +164,35 @@
             this.bt_configuracoes.TabStop = false;
             this.bt_configuracoes.Click += new System.EventHandler(this.bt_configuracoes_Click);
             // 
-            // button1
+            // kryptonPictureBox1
             // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(55)))), ((int)(((byte)(88)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(-3, 422);
-            this.button1.Margin = new System.Windows.Forms.Padding(0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(205, 48);
-            this.button1.TabIndex = 18;
-            this.button1.Text = "      Curva ABC";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = false;
+            this.kryptonPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("kryptonPictureBox1.Image")));
+            this.kryptonPictureBox1.Location = new System.Drawing.Point(-1, 12);
+            this.kryptonPictureBox1.Name = "kryptonPictureBox1";
+            this.kryptonPictureBox1.Size = new System.Drawing.Size(71, 36);
+            this.kryptonPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.kryptonPictureBox1.TabIndex = 27;
+            this.kryptonPictureBox1.TabStop = false;
+            // 
+            // btCurvaABC
+            // 
+            this.btCurvaABC.BackColor = System.Drawing.Color.Transparent;
+            this.btCurvaABC.FlatAppearance.BorderSize = 0;
+            this.btCurvaABC.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.btCurvaABC.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(55)))), ((int)(((byte)(88)))));
+            this.btCurvaABC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btCurvaABC.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btCurvaABC.ForeColor = System.Drawing.Color.White;
+            this.btCurvaABC.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btCurvaABC.Location = new System.Drawing.Point(-3, 422);
+            this.btCurvaABC.Margin = new System.Windows.Forms.Padding(0);
+            this.btCurvaABC.Name = "btCurvaABC";
+            this.btCurvaABC.Size = new System.Drawing.Size(205, 48);
+            this.btCurvaABC.TabIndex = 18;
+            this.btCurvaABC.Text = "      Curva ABC";
+            this.btCurvaABC.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btCurvaABC.UseVisualStyleBackColor = false;
+            this.btCurvaABC.Click += new System.EventHandler(this.btCurvaABC_Click);
             // 
             // labelCadastro
             // 
@@ -304,17 +316,6 @@
             this.bt_cadastro_merc.UseVisualStyleBackColor = false;
             this.bt_cadastro_merc.Click += new System.EventHandler(this.bt_cadastro_merc_Click);
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.bt_deslogar);
-            this.panel1.Controls.Add(this.bt_fechar);
-            this.panel1.Controls.Add(this.bt_configuracoes);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 621);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 49);
-            this.panel1.TabIndex = 13;
-            // 
             // Container
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -335,14 +336,14 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.painelLateral.ResumeLayout(false);
             this.painelLateral.PerformLayout();
+            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bt_deslogar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonPictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bt_fechar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bt_configuracoes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonPictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSuprimentos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picRelatorios)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCadastro)).EndInit();
-            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -361,7 +362,7 @@
         private System.Windows.Forms.PictureBox picSuprimentos;
         private System.Windows.Forms.PictureBox picRelatorios;
         private System.Windows.Forms.Label labelCadastro;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btCurvaABC;
         private System.Windows.Forms.PictureBox bt_fechar;
         private Krypton.Toolkit.KryptonPictureBox kryptonPictureBox1;
         private System.Windows.Forms.PictureBox bt_deslogar;
