@@ -46,5 +46,10 @@ namespace FormCont
         {
 
         }
+
+        private void RelatoriosES_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

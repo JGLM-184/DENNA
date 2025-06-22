@@ -28,18 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.chartReal = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chartIdeal = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.kryptonButton2 = new Krypton.Toolkit.KryptonButton();
             this.btGerarCurva = new Krypton.Toolkit.KryptonButton();
             this.tabelaCurvaABC = new System.Windows.Forms.DataGridView();
@@ -71,12 +73,10 @@
             this.Estoque_Maximo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Crossdocking = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Localizacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.chartIdeal = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.chartReal = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tabelaCurvaABC)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartIdeal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartReal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartIdeal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tabelaCurvaABC)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -89,17 +89,51 @@
             this.groupBox1.Controls.Add(this.btGerarCurva);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(37)))), ((int)(((byte)(58)))));
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Location = new System.Drawing.Point(25, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1750, 592);
+            this.groupBox1.Size = new System.Drawing.Size(1133, 283);
             this.groupBox1.TabIndex = 64;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Relatório - Curva ABC";
             // 
+            // chartReal
+            // 
+            this.chartReal.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            chartArea3.Name = "ChartArea1";
+            this.chartReal.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.chartReal.Legends.Add(legend3);
+            this.chartReal.Location = new System.Drawing.Point(467, 47);
+            this.chartReal.Name = "chartReal";
+            series3.ChartArea = "ChartArea1";
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            this.chartReal.Series.Add(series3);
+            this.chartReal.Size = new System.Drawing.Size(329, 214);
+            this.chartReal.TabIndex = 79;
+            this.chartReal.Text = "chart1";
+            // 
+            // chartIdeal
+            // 
+            this.chartIdeal.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            chartArea4.Name = "ChartArea1";
+            this.chartIdeal.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.chartIdeal.Legends.Add(legend4);
+            this.chartIdeal.Location = new System.Drawing.Point(24, 47);
+            this.chartIdeal.Name = "chartIdeal";
+            series4.ChartArea = "ChartArea1";
+            series4.Legend = "Legend1";
+            series4.Name = "Series1";
+            this.chartIdeal.Series.Add(series4);
+            this.chartIdeal.Size = new System.Drawing.Size(329, 214);
+            this.chartIdeal.TabIndex = 78;
+            this.chartIdeal.Text = "chart1";
+            // 
             // kryptonButton2
             // 
             this.kryptonButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.kryptonButton2.Location = new System.Drawing.Point(1412, 218);
+            this.kryptonButton2.Location = new System.Drawing.Point(927, 150);
             this.kryptonButton2.Name = "kryptonButton2";
             this.kryptonButton2.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
             this.kryptonButton2.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
@@ -147,7 +181,7 @@
             // btGerarCurva
             // 
             this.btGerarCurva.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btGerarCurva.Location = new System.Drawing.Point(1542, 218);
+            this.btGerarCurva.Location = new System.Drawing.Point(894, 89);
             this.btGerarCurva.Name = "btGerarCurva";
             this.btGerarCurva.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.btGerarCurva.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
@@ -195,21 +229,21 @@
             // 
             // tabelaCurvaABC
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.tabelaCurvaABC.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            this.tabelaCurvaABC.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
             this.tabelaCurvaABC.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tabelaCurvaABC.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tabelaCurvaABC.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.tabelaCurvaABC.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tabelaCurvaABC.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Codigo,
@@ -240,27 +274,27 @@
             this.Estoque_Maximo,
             this.Crossdocking,
             this.Localizacao});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.tabelaCurvaABC.DefaultCellStyle = dataGridViewCellStyle3;
-            this.tabelaCurvaABC.Location = new System.Drawing.Point(12, 399);
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.tabelaCurvaABC.DefaultCellStyle = dataGridViewCellStyle8;
+            this.tabelaCurvaABC.Location = new System.Drawing.Point(25, 329);
             this.tabelaCurvaABC.Name = "tabelaCurvaABC";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tabelaCurvaABC.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            this.tabelaCurvaABC.RowsDefaultCellStyle = dataGridViewCellStyle5;
-            this.tabelaCurvaABC.Size = new System.Drawing.Size(1750, 211);
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tabelaCurvaABC.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
+            this.tabelaCurvaABC.RowsDefaultCellStyle = dataGridViewCellStyle10;
+            this.tabelaCurvaABC.Size = new System.Drawing.Size(1133, 338);
             this.tabelaCurvaABC.TabIndex = 68;
             // 
             // Codigo
@@ -431,51 +465,21 @@
             this.Localizacao.Name = "Localizacao";
             this.Localizacao.Visible = false;
             // 
-            // chartIdeal
-            // 
-            chartArea2.Name = "ChartArea1";
-            this.chartIdeal.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chartIdeal.Legends.Add(legend2);
-            this.chartIdeal.Location = new System.Drawing.Point(49, 102);
-            this.chartIdeal.Name = "chartIdeal";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chartIdeal.Series.Add(series2);
-            this.chartIdeal.Size = new System.Drawing.Size(329, 214);
-            this.chartIdeal.TabIndex = 78;
-            this.chartIdeal.Text = "chart1";
-            // 
-            // chartReal
-            // 
-            chartArea1.Name = "ChartArea1";
-            this.chartReal.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chartReal.Legends.Add(legend1);
-            this.chartReal.Location = new System.Drawing.Point(725, 102);
-            this.chartReal.Name = "chartReal";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chartReal.Series.Add(series1);
-            this.chartReal.Size = new System.Drawing.Size(329, 214);
-            this.chartReal.TabIndex = 79;
-            this.chartReal.Text = "chart1";
-            // 
             // CurvaABC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1774, 634);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1184, 679);
             this.Controls.Add(this.tabelaCurvaABC);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CurvaABC";
             this.Text = "CurvaABC";
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.tabelaCurvaABC)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartIdeal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartReal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartIdeal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tabelaCurvaABC)).EndInit();
             this.ResumeLayout(false);
 
         }
