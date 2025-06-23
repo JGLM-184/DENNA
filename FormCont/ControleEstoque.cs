@@ -32,6 +32,8 @@ namespace FormCont
             toolTip.SetToolTip(btEditar, "Editar mercadoria selecionada");
             toolTip.SetToolTip(btDeletar, "Excluir mercadoria selecionada");
             toolTip.SetToolTip(btBuscarMerc, "Buscar uma mercadoria");
+            toolTip.SetToolTip(btLimpar, "Limpar listagem");
+
         }
 
         private void btListarMercFull_Click(object sender, EventArgs e)
@@ -47,6 +49,9 @@ namespace FormCont
                 if (dataTable != null && dataTable.Rows.Count > 0)
                 {
                     tabelaMercadorias.DataSource = dataTable;
+                    tabelaMercadorias.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                    tabelaMercadorias.EnableHeadersVisualStyles = false;
+                    tabelaMercadorias.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
                 }
                 else
                 {
@@ -70,6 +75,7 @@ namespace FormCont
 
                     // Pegando os dados direto da linha
                     string tipo = row.Cells["Tipo"].Value.ToString();
+                    string nome = row.Cells["Nome"].Value.ToString();
                     string precoVenda = row.Cells["Preço de Venda"].Value.ToString();
                     string formato = row.Cells["Formato"].Value.ToString();
                     string quantidade = row.Cells["Quantidade"].Value.ToString();
@@ -97,7 +103,7 @@ namespace FormCont
                     string localizacao = row.Cells["Localização"].Value.ToString();
 
                     // Chama o form de edição
-                    var formEdicao = new EditarMercadoria(codigo, tipo, formato,precoVenda, quantidade,
+                    var formEdicao = new EditarMercadoria(codigo, nome, tipo, formato,precoVenda, quantidade,
                     condicao, situacao, marca, producao,  validade, freteGratis, volumes, pesoLiquido,
                     pesoBruto, largura, altura, profundidade, itensCaixa, unidadeMedida, varAtributo,
                     varOpcao, gtin, departamento, estoqueMinimo, estoqueMaximo, crossdocking, localizacao);
@@ -157,6 +163,10 @@ namespace FormCont
                 if (dataTable != null && dataTable.Rows.Count > 0)
                 {
                     tabelaMercadorias.DataSource = dataTable;
+                    tabelaMercadorias.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                    tabelaMercadorias.EnableHeadersVisualStyles = false;
+                    tabelaMercadorias.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+
                 }
                 else
                 {
@@ -167,6 +177,13 @@ namespace FormCont
             {
                 MessageBox.Show("Erro ao buscar dados: " + ex.Message);
             }
+        }
+
+        private void btLimpar_Click(object sender, EventArgs e)
+        {
+            tabelaMercadorias.DataSource = null;
+            tabelaMercadorias.Rows.Clear();
+            txtBarraPesquisa.Clear();
         }
     }
 }

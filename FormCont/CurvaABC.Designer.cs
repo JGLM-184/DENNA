@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
@@ -39,6 +40,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CurvaABC));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.chartReal = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chartIdeal = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -73,6 +75,8 @@
             this.Estoque_Maximo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Crossdocking = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Localizacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btLimpar = new Krypton.Toolkit.KryptonButton();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartReal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartIdeal)).BeginInit();
@@ -83,6 +87,7 @@
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.btLimpar);
             this.groupBox1.Controls.Add(this.chartReal);
             this.groupBox1.Controls.Add(this.chartIdeal);
             this.groupBox1.Controls.Add(this.kryptonButton2);
@@ -103,7 +108,7 @@
             this.chartReal.ChartAreas.Add(chartArea3);
             legend3.Name = "Legend1";
             this.chartReal.Legends.Add(legend3);
-            this.chartReal.Location = new System.Drawing.Point(467, 47);
+            this.chartReal.Location = new System.Drawing.Point(441, 47);
             this.chartReal.Name = "chartReal";
             series3.ChartArea = "ChartArea1";
             series3.Legend = "Legend1";
@@ -133,7 +138,7 @@
             // kryptonButton2
             // 
             this.kryptonButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.kryptonButton2.Location = new System.Drawing.Point(927, 150);
+            this.kryptonButton2.Location = new System.Drawing.Point(817, 47);
             this.kryptonButton2.Name = "kryptonButton2";
             this.kryptonButton2.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
             this.kryptonButton2.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
@@ -181,7 +186,7 @@
             // btGerarCurva
             // 
             this.btGerarCurva.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btGerarCurva.Location = new System.Drawing.Point(894, 89);
+            this.btGerarCurva.Location = new System.Drawing.Point(942, 47);
             this.btGerarCurva.Name = "btGerarCurva";
             this.btGerarCurva.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.btGerarCurva.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
@@ -465,6 +470,57 @@
             this.Localizacao.Name = "Localizacao";
             this.Localizacao.Visible = false;
             // 
+            // btLimpar
+            // 
+            this.btLimpar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btLimpar.Location = new System.Drawing.Point(1048, 205);
+            this.btLimpar.Name = "btLimpar";
+            this.btLimpar.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.btLimpar.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.btLimpar.OverrideDefault.Back.ColorAngle = 45F;
+            this.btLimpar.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.btLimpar.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.btLimpar.OverrideDefault.Border.ColorAngle = 45F;
+            this.btLimpar.OverrideDefault.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btLimpar.OverrideDefault.Border.Rounding = 20F;
+            this.btLimpar.OverrideDefault.Border.Width = 1;
+            this.btLimpar.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            this.btLimpar.Size = new System.Drawing.Size(64, 56);
+            this.btLimpar.StateCommon.Back.Color1 = System.Drawing.Color.DarkBlue;
+            this.btLimpar.StateCommon.Back.Color2 = System.Drawing.Color.DarkBlue;
+            this.btLimpar.StateCommon.Back.ColorAngle = 45F;
+            this.btLimpar.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.btLimpar.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.btLimpar.StateCommon.Border.ColorAngle = 45F;
+            this.btLimpar.StateCommon.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btLimpar.StateCommon.Border.Rounding = 20F;
+            this.btLimpar.StateCommon.Border.Width = 1;
+            this.btLimpar.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.btLimpar.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.btLimpar.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btLimpar.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
+            this.btLimpar.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            this.btLimpar.StatePressed.Back.ColorAngle = 135F;
+            this.btLimpar.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
+            this.btLimpar.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            this.btLimpar.StatePressed.Border.ColorAngle = 135F;
+            this.btLimpar.StatePressed.Border.Rounding = 20F;
+            this.btLimpar.StatePressed.Border.Width = 1;
+            this.btLimpar.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.btLimpar.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.btLimpar.StateTracking.Back.ColorAngle = 45F;
+            this.btLimpar.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.btLimpar.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.btLimpar.StateTracking.Border.ColorAngle = 45F;
+            this.btLimpar.StateTracking.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btLimpar.StateTracking.Border.Rounding = 20F;
+            this.btLimpar.StateTracking.Border.Width = 1;
+            this.btLimpar.TabIndex = 82;
+            this.btLimpar.Values.DropDownArrowColor = System.Drawing.Color.Empty;
+            this.btLimpar.Values.Image = ((System.Drawing.Image)(resources.GetObject("btLimpar.Values.Image")));
+            this.btLimpar.Values.Text = "";
+            this.btLimpar.Click += new System.EventHandler(this.btLimpar_Click);
+            // 
             // CurvaABC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -520,5 +576,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Localizacao;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartIdeal;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartReal;
+        private Krypton.Toolkit.KryptonButton btLimpar;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

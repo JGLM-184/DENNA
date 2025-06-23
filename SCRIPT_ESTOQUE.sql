@@ -1,42 +1,44 @@
 CREATE DATABASE IF NOT EXISTS Estoque;
 USE Estoque;
 
-create table mercadorias (
-ID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-Quantidade int (30) NOT NULL,
-Itens_caixa int NOT NULL,
-estoque_minimo int NOT NULL,
-estoque_maximo int NOT NULL,
-Volumes float (6,2) NOT NULL,
-Peso_liquido float (6,2) NOT NULL,
-Peso_bruto float (6,2) NOT NULL,
-Largura float (6,2) NOT NULL,
-Altura float (6,2) NOT NULL,
-Profundidade float (6,2) NOT NULL,
-Preco_venda float (6, 2) NOT NULL,
-codigo varchar (30) NOT NULL,
-Formato varchar (30) NOT NULL,
-Condicao varchar (30) NOT NULL,
-Tipo varchar (30) NOT NULL,
-Situacao varchar (30) NOT NULL,
-Marca varchar (50) NOT NULL,
-Producao varchar (30) NOT NULL,
-Data_validade varchar (30) NOT NULL,
-Frete_gratis varchar (10) NOT NULL,
-Unidade_Medida varchar (30) NOT NULL,
-Variacao_Atributo varchar (30) NOT NULL,
-Variacao_Opcao varchar (30) NOT NULL,
-GTIN varchar (30) NOT NULL,
-Departamento varchar (30) NOT NULL,
-Crossdocking varchar (30) NOT NULL,
-Localizacao varchar (30) NOT NULL
-) default charset = utf8;
+CREATE TABLE IF NOT EXISTS mercadorias (
+    ID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    Nome VARCHAR(100) NOT NULL,
+    Quantidade int(30) NOT NULL,
+    Itens_caixa int NOT NULL,
+    estoque_minimo int NOT NULL,
+    estoque_maximo int NOT NULL,
+    Volumes float(6,2) NOT NULL,
+    Peso_liquido float(6,2) NOT NULL,
+    Peso_bruto float(6,2) NOT NULL,
+    Largura float(6,2) NOT NULL,
+    Altura float(6,2) NOT NULL,
+    Profundidade float(6,2) NOT NULL,
+    Preco_venda float(6,2) NOT NULL,
+    codigo varchar(30) NOT NULL,
+    Formato varchar(30) NOT NULL,
+    Condicao varchar(30) NOT NULL,
+    Tipo varchar(30) NOT NULL,
+    Situacao varchar(30) NOT NULL,
+    Marca varchar(50) NOT NULL,
+    Producao varchar(30) NOT NULL,
+    Data_validade varchar(30) NOT NULL,
+    Frete_gratis varchar(10) NOT NULL,
+    Unidade_Medida varchar(30) NOT NULL,
+    Variacao_Atributo varchar(30) NOT NULL,
+    Variacao_Opcao varchar(30) NOT NULL,
+    GTIN varchar(30) NOT NULL,
+    Departamento varchar(30) NOT NULL,
+    Crossdocking varchar(30) NOT NULL,
+    Localizacao varchar(30) NOT NULL,
+    UNIQUE KEY unique_codigo (codigo)
+) DEFAULT CHARSET=utf8;
 
 create table funcionarios (
-Codigo_ID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-Nome varchar (50) NOT NULL,
-login varchar (50) NOT NULL,
-Senha varchar (10) NOT NULL
+	Codigo_ID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	Nome varchar (50) NOT NULL,
+	login varchar (50) NOT NULL,
+	Senha varchar (10) NOT NULL
 ) default charset = utf8;
 select * from mercadorias;
 
@@ -50,13 +52,13 @@ CREATE TABLE IF NOT EXISTS estoque (
 
 CREATE TABLE IF NOT EXISTS movimentos_estoque (
     id_movimento INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    codigo_mercadoria INT NOT NULL,
+    codigo_mercadoria VARCHAR(30) NOT NULL,
     tipo_movimento ENUM('ENTRADA', 'SAIDA') NOT NULL,
     quantidade INT(10) NOT NULL, 
     preco_unitario_movimento DECIMAL(8, 2) NOT NULL,
     data_hora_movimento DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
     observacoes VARCHAR(255),
-    FOREIGN KEY (codigo_mercadoria) REFERENCES mercadorias(Id)
+    FOREIGN KEY (codigo_mercadoria) REFERENCES mercadorias(codigo)
 ) DEFAULT CHARSET = utf8;
 
 DELIMITER $$
@@ -226,16 +228,3 @@ JOIN (
     FROM movimentos_estoque me
     WHERE me.tipo_movimento = 'SAIDA'
 ) v2;
-
-select * from mercadorias;
-
-/* ----------------------------------------
-COMO A TABELA DE MOVIMENTAÇÃO NÃO TINHA ITENS
-COLOCAMOS ALGUNS EXEMPLOS PARA TESTAR O RELATÓRIO
-
-INSERT INTO movimentos_estoque
-    (codigo_mercadoria, tipo_movimento, quantidade, preco_unitario_movimento, data_hora_movimento, observacoes)
-VALUES
-    (3, 'ENTRADA', 100, 25.50, '2025-06-21 10:30:00', 'Recebimento fornecedor A'),
-    (3, 'SAIDA', 20, 30.00, '2025-06-21 15:45:00', 'Venda para cliente B');
--------------------------------------------*/

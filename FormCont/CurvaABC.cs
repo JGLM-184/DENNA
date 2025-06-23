@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace FormCont
 {
@@ -16,6 +17,8 @@ namespace FormCont
             InitializeComponent();
             this.Load += CurvaABC_Load;
             btGerarCurva.Click += btGerarCurva_Click;
+            toolTip1.SetToolTip(btLimpar, "Limpar listagem");
+
         }
 
         private void CurvaABC_Load(object sender, EventArgs e)
@@ -32,16 +35,16 @@ namespace FormCont
                 using (MySqlConnection conn = new MySqlConnection(ConexaoBanco.conexaoBd))
                 {
                     string query = @"
-    SELECT 
-        ID, 
-        codigo, 
-        Marca, 
-        Quantidade, 
-        Preco_venda, 
-        (Quantidade * Preco_venda) AS TotalEstoque 
-    FROM mercadorias
-    ORDER BY Preco_venda DESC
-";
+                                   SELECT 
+                                        ID, 
+                                        codigo, 
+                                        Marca, 
+                                        Quantidade, 
+                                        Preco_venda, 
+                                        (Quantidade * Preco_venda) AS TotalEstoque 
+                                    FROM mercadorias
+                                    ORDER BY Preco_venda DESC
+                                ";
 
 
                     MySqlDataAdapter adapter = new MySqlDataAdapter(query, conn);
@@ -53,11 +56,6 @@ namespace FormCont
                     tabelaCurvaABC.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
                     tabelaCurvaABC.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
                     tabelaCurvaABC.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-
-
-
-                    //tabelaCurvaABC.DefaultCellStyle.Font = new Font("Segoe UI", 14); //fonte e tamanho que preferir
-
 
                     GerarGraficoReal(dt);
                 }
@@ -190,6 +188,12 @@ namespace FormCont
         {
             CarregarDados();
 
+        }
+
+        private void btLimpar_Click(object sender, EventArgs e)
+        {
+            tabelaCurvaABC.DataSource = null;
+            tabelaCurvaABC.Rows.Clear();
         }
     }
 }
