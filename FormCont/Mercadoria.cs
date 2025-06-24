@@ -17,9 +17,9 @@ namespace FormCont
         //Atributos
         private int quantidade, itens_caixa, estoque_minimo, estoque_maximo;
 
-        private float volumes, peso_liquido, peso_bruto, largura, altura, profundidade;
+        private float volumes, peso_liquido, peso_bruto, largura, altura, profundidade, preco_venda;
 
-        private string codigo, nome, formato, condicao, tipo, situacao, preco_venda, marca, producao,
+        private string codigo, nome, formato, condicao, tipo, situacao, marca, producao,
             data_validade, frete_gratis, unidade_medida, variacao_atributo, variacao_opcao, gtin,
             departamento, crossdocking, localizacao;
 
@@ -120,7 +120,7 @@ namespace FormCont
             set { situacao = value; }
         }
 
-        public string Preco_Venda
+        public float Preco_Venda
         {
             get { return preco_venda; }
             set { preco_venda = value; }

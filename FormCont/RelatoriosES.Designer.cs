@@ -29,21 +29,24 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RelatoriosES));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label2 = new System.Windows.Forms.Label();
             this.rdbMes = new System.Windows.Forms.RadioButton();
             this.rdbPeriodo = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btLimpar = new Krypton.Toolkit.KryptonButton();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btDesmarcar = new Krypton.Toolkit.KryptonButton();
+            this.label3 = new System.Windows.Forms.Label();
+            this.dtFinal = new System.Windows.Forms.DateTimePicker();
+            this.dtInicio = new System.Windows.Forms.DateTimePicker();
             this.btExportar = new Krypton.Toolkit.KryptonButton();
             this.btGerarRelatorio = new Krypton.Toolkit.KryptonButton();
-            this.dtFinal = new System.Windows.Forms.DateTimePicker();
-            this.label3 = new System.Windows.Forms.Label();
-            this.dtInicio = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.txtCodigoBusca = new System.Windows.Forms.TextBox();
             this.tabelaRelatorio = new System.Windows.Forms.DataGridView();
@@ -75,13 +78,10 @@
             this.Estoque_Maximo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Crossdocking = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Localizacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btDesmarcar = new Krypton.Toolkit.KryptonButton();
-            this.btLimpar = new Krypton.Toolkit.KryptonButton();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tabelaRelatorio)).BeginInit();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tabelaRelatorio)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -142,6 +142,161 @@
             this.groupBox1.TabIndex = 63;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Relatório - Entrada e Saída";
+            // 
+            // btLimpar
+            // 
+            this.btLimpar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btLimpar.Location = new System.Drawing.Point(1043, 199);
+            this.btLimpar.Name = "btLimpar";
+            this.btLimpar.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.btLimpar.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.btLimpar.OverrideDefault.Back.ColorAngle = 45F;
+            this.btLimpar.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.btLimpar.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.btLimpar.OverrideDefault.Border.ColorAngle = 45F;
+            this.btLimpar.OverrideDefault.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btLimpar.OverrideDefault.Border.Rounding = 20F;
+            this.btLimpar.OverrideDefault.Border.Width = 1;
+            this.btLimpar.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            this.btLimpar.Size = new System.Drawing.Size(63, 52);
+            this.btLimpar.StateCommon.Back.Color1 = System.Drawing.Color.DarkBlue;
+            this.btLimpar.StateCommon.Back.Color2 = System.Drawing.Color.DarkBlue;
+            this.btLimpar.StateCommon.Back.ColorAngle = 45F;
+            this.btLimpar.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.btLimpar.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.btLimpar.StateCommon.Border.ColorAngle = 45F;
+            this.btLimpar.StateCommon.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btLimpar.StateCommon.Border.Rounding = 20F;
+            this.btLimpar.StateCommon.Border.Width = 1;
+            this.btLimpar.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.btLimpar.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.btLimpar.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btLimpar.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
+            this.btLimpar.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            this.btLimpar.StatePressed.Back.ColorAngle = 135F;
+            this.btLimpar.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
+            this.btLimpar.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            this.btLimpar.StatePressed.Border.ColorAngle = 135F;
+            this.btLimpar.StatePressed.Border.Rounding = 20F;
+            this.btLimpar.StatePressed.Border.Width = 1;
+            this.btLimpar.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.btLimpar.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.btLimpar.StateTracking.Back.ColorAngle = 45F;
+            this.btLimpar.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.btLimpar.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.btLimpar.StateTracking.Border.ColorAngle = 45F;
+            this.btLimpar.StateTracking.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btLimpar.StateTracking.Border.Rounding = 20F;
+            this.btLimpar.StateTracking.Border.Width = 1;
+            this.btLimpar.TabIndex = 80;
+            this.btLimpar.Values.DropDownArrowColor = System.Drawing.Color.Empty;
+            this.btLimpar.Values.Image = ((System.Drawing.Image)(resources.GetObject("btLimpar.Values.Image")));
+            this.btLimpar.Values.Text = "";
+            this.btLimpar.Click += new System.EventHandler(this.btLimpar_Click);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.btDesmarcar);
+            this.groupBox2.Controls.Add(this.label3);
+            this.groupBox2.Controls.Add(this.rdbPeriodo);
+            this.groupBox2.Controls.Add(this.dtFinal);
+            this.groupBox2.Controls.Add(this.rdbMes);
+            this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Controls.Add(this.dtInicio);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(19, 101);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(343, 150);
+            this.groupBox2.TabIndex = 78;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Por Data";
+            // 
+            // btDesmarcar
+            // 
+            this.btDesmarcar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btDesmarcar.Location = new System.Drawing.Point(15, 89);
+            this.btDesmarcar.Name = "btDesmarcar";
+            this.btDesmarcar.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.btDesmarcar.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.btDesmarcar.OverrideDefault.Back.ColorAngle = 45F;
+            this.btDesmarcar.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.btDesmarcar.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.btDesmarcar.OverrideDefault.Border.ColorAngle = 45F;
+            this.btDesmarcar.OverrideDefault.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btDesmarcar.OverrideDefault.Border.Rounding = 20F;
+            this.btDesmarcar.OverrideDefault.Border.Width = 1;
+            this.btDesmarcar.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            this.btDesmarcar.Size = new System.Drawing.Size(85, 38);
+            this.btDesmarcar.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.btDesmarcar.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
+            this.btDesmarcar.StateCommon.Back.ColorAngle = 45F;
+            this.btDesmarcar.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.btDesmarcar.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.btDesmarcar.StateCommon.Border.ColorAngle = 45F;
+            this.btDesmarcar.StateCommon.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btDesmarcar.StateCommon.Border.Rounding = 20F;
+            this.btDesmarcar.StateCommon.Border.Width = 1;
+            this.btDesmarcar.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.btDesmarcar.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btDesmarcar.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
+            this.btDesmarcar.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            this.btDesmarcar.StatePressed.Back.ColorAngle = 135F;
+            this.btDesmarcar.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
+            this.btDesmarcar.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            this.btDesmarcar.StatePressed.Border.ColorAngle = 135F;
+            this.btDesmarcar.StatePressed.Border.Rounding = 20F;
+            this.btDesmarcar.StatePressed.Border.Width = 1;
+            this.btDesmarcar.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.btDesmarcar.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.btDesmarcar.StateTracking.Back.ColorAngle = 45F;
+            this.btDesmarcar.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.btDesmarcar.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.btDesmarcar.StateTracking.Border.ColorAngle = 45F;
+            this.btDesmarcar.StateTracking.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btDesmarcar.StateTracking.Border.Rounding = 20F;
+            this.btDesmarcar.StateTracking.Border.Width = 1;
+            this.btDesmarcar.TabIndex = 79;
+            this.btDesmarcar.Values.DropDownArrowColor = System.Drawing.Color.Empty;
+            this.btDesmarcar.Values.Text = "Desmarcar";
+            this.btDesmarcar.Click += new System.EventHandler(this.btDesmarcar_Click);
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(37)))), ((int)(((byte)(58)))));
+            this.label3.Location = new System.Drawing.Point(138, 116);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(63, 16);
+            this.label3.TabIndex = 74;
+            this.label3.Text = "Data final";
+            // 
+            // dtFinal
+            // 
+            this.dtFinal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtFinal.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtFinal.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.dtFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtFinal.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtFinal.Location = new System.Drawing.Point(207, 111);
+            this.dtFinal.Name = "dtFinal";
+            this.dtFinal.Size = new System.Drawing.Size(124, 26);
+            this.dtFinal.TabIndex = 75;
+            this.dtFinal.Value = new System.DateTime(2024, 10, 13, 0, 0, 0, 0);
+            // 
+            // dtInicio
+            // 
+            this.dtInicio.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtInicio.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtInicio.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.dtInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtInicio.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtInicio.Location = new System.Drawing.Point(207, 76);
+            this.dtInicio.Name = "dtInicio";
+            this.dtInicio.Size = new System.Drawing.Size(124, 26);
+            this.dtInicio.TabIndex = 66;
+            this.dtInicio.Value = new System.DateTime(2024, 10, 13, 0, 0, 0, 0);
             // 
             // btExportar
             // 
@@ -241,44 +396,6 @@
             this.btGerarRelatorio.Values.Text = "Gerar Relatório";
             this.btGerarRelatorio.Click += new System.EventHandler(this.btGerarRelatorio_Click_1);
             // 
-            // dtFinal
-            // 
-            this.dtFinal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtFinal.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtFinal.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.dtFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtFinal.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtFinal.Location = new System.Drawing.Point(207, 111);
-            this.dtFinal.Name = "dtFinal";
-            this.dtFinal.Size = new System.Drawing.Size(124, 26);
-            this.dtFinal.TabIndex = 75;
-            this.dtFinal.Value = new System.DateTime(2024, 10, 13, 0, 0, 0, 0);
-            // 
-            // label3
-            // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(37)))), ((int)(((byte)(58)))));
-            this.label3.Location = new System.Drawing.Point(138, 116);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(63, 16);
-            this.label3.TabIndex = 74;
-            this.label3.Text = "Data final";
-            // 
-            // dtInicio
-            // 
-            this.dtInicio.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtInicio.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtInicio.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.dtInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtInicio.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtInicio.Location = new System.Drawing.Point(207, 76);
-            this.dtInicio.Name = "dtInicio";
-            this.dtInicio.Size = new System.Drawing.Size(124, 26);
-            this.dtInicio.TabIndex = 66;
-            this.dtInicio.Value = new System.DateTime(2024, 10, 13, 0, 0, 0, 0);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -302,21 +419,21 @@
             // 
             // tabelaRelatorio
             // 
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            this.tabelaRelatorio.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.tabelaRelatorio.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.tabelaRelatorio.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tabelaRelatorio.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tabelaRelatorio.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.tabelaRelatorio.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tabelaRelatorio.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Codigo,
@@ -347,26 +464,26 @@
             this.Estoque_Maximo,
             this.Crossdocking,
             this.Localizacao});
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.tabelaRelatorio.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.tabelaRelatorio.DefaultCellStyle = dataGridViewCellStyle3;
             this.tabelaRelatorio.Location = new System.Drawing.Point(27, 300);
             this.tabelaRelatorio.Name = "tabelaRelatorio";
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tabelaRelatorio.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
-            this.tabelaRelatorio.RowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tabelaRelatorio.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            this.tabelaRelatorio.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.tabelaRelatorio.Size = new System.Drawing.Size(1133, 353);
             this.tabelaRelatorio.TabIndex = 67;
             // 
@@ -538,123 +655,6 @@
             this.Localizacao.Name = "Localizacao";
             this.Localizacao.Visible = false;
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.btDesmarcar);
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.rdbPeriodo);
-            this.groupBox2.Controls.Add(this.dtFinal);
-            this.groupBox2.Controls.Add(this.rdbMes);
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.dtInicio);
-            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(19, 101);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(343, 150);
-            this.groupBox2.TabIndex = 78;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Por Data";
-            // 
-            // btDesmarcar
-            // 
-            this.btDesmarcar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btDesmarcar.Location = new System.Drawing.Point(15, 89);
-            this.btDesmarcar.Name = "btDesmarcar";
-            this.btDesmarcar.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
-            this.btDesmarcar.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
-            this.btDesmarcar.OverrideDefault.Back.ColorAngle = 45F;
-            this.btDesmarcar.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.btDesmarcar.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.btDesmarcar.OverrideDefault.Border.ColorAngle = 45F;
-            this.btDesmarcar.OverrideDefault.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.btDesmarcar.OverrideDefault.Border.Rounding = 20F;
-            this.btDesmarcar.OverrideDefault.Border.Width = 1;
-            this.btDesmarcar.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.btDesmarcar.Size = new System.Drawing.Size(85, 38);
-            this.btDesmarcar.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
-            this.btDesmarcar.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(252)))), ((int)(((byte)(252)))));
-            this.btDesmarcar.StateCommon.Back.ColorAngle = 45F;
-            this.btDesmarcar.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.btDesmarcar.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.btDesmarcar.StateCommon.Border.ColorAngle = 45F;
-            this.btDesmarcar.StateCommon.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.btDesmarcar.StateCommon.Border.Rounding = 20F;
-            this.btDesmarcar.StateCommon.Border.Width = 1;
-            this.btDesmarcar.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.btDesmarcar.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btDesmarcar.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
-            this.btDesmarcar.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
-            this.btDesmarcar.StatePressed.Back.ColorAngle = 135F;
-            this.btDesmarcar.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
-            this.btDesmarcar.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
-            this.btDesmarcar.StatePressed.Border.ColorAngle = 135F;
-            this.btDesmarcar.StatePressed.Border.Rounding = 20F;
-            this.btDesmarcar.StatePressed.Border.Width = 1;
-            this.btDesmarcar.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.btDesmarcar.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.btDesmarcar.StateTracking.Back.ColorAngle = 45F;
-            this.btDesmarcar.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.btDesmarcar.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.btDesmarcar.StateTracking.Border.ColorAngle = 45F;
-            this.btDesmarcar.StateTracking.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.btDesmarcar.StateTracking.Border.Rounding = 20F;
-            this.btDesmarcar.StateTracking.Border.Width = 1;
-            this.btDesmarcar.TabIndex = 79;
-            this.btDesmarcar.Values.DropDownArrowColor = System.Drawing.Color.Empty;
-            this.btDesmarcar.Values.Text = "Desmarcar";
-            this.btDesmarcar.Click += new System.EventHandler(this.btDesmarcar_Click);
-            // 
-            // btLimpar
-            // 
-            this.btLimpar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btLimpar.Location = new System.Drawing.Point(1042, 190);
-            this.btLimpar.Name = "btLimpar";
-            this.btLimpar.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.btLimpar.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.btLimpar.OverrideDefault.Back.ColorAngle = 45F;
-            this.btLimpar.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.btLimpar.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.btLimpar.OverrideDefault.Border.ColorAngle = 45F;
-            this.btLimpar.OverrideDefault.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.btLimpar.OverrideDefault.Border.Rounding = 20F;
-            this.btLimpar.OverrideDefault.Border.Width = 1;
-            this.btLimpar.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.btLimpar.Size = new System.Drawing.Size(64, 61);
-            this.btLimpar.StateCommon.Back.Color1 = System.Drawing.Color.DarkBlue;
-            this.btLimpar.StateCommon.Back.Color2 = System.Drawing.Color.DarkBlue;
-            this.btLimpar.StateCommon.Back.ColorAngle = 45F;
-            this.btLimpar.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.btLimpar.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.btLimpar.StateCommon.Border.ColorAngle = 45F;
-            this.btLimpar.StateCommon.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.btLimpar.StateCommon.Border.Rounding = 20F;
-            this.btLimpar.StateCommon.Border.Width = 1;
-            this.btLimpar.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
-            this.btLimpar.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
-            this.btLimpar.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btLimpar.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
-            this.btLimpar.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
-            this.btLimpar.StatePressed.Back.ColorAngle = 135F;
-            this.btLimpar.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
-            this.btLimpar.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
-            this.btLimpar.StatePressed.Border.ColorAngle = 135F;
-            this.btLimpar.StatePressed.Border.Rounding = 20F;
-            this.btLimpar.StatePressed.Border.Width = 1;
-            this.btLimpar.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.btLimpar.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.btLimpar.StateTracking.Back.ColorAngle = 45F;
-            this.btLimpar.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.btLimpar.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.btLimpar.StateTracking.Border.ColorAngle = 45F;
-            this.btLimpar.StateTracking.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.btLimpar.StateTracking.Border.Rounding = 20F;
-            this.btLimpar.StateTracking.Border.Width = 1;
-            this.btLimpar.TabIndex = 80;
-            this.btLimpar.Values.DropDownArrowColor = System.Drawing.Color.Empty;
-            this.btLimpar.Values.Image = ((System.Drawing.Image)(resources.GetObject("kryptonButton1.Values.Image")));
-            this.btLimpar.Values.Text = "";
-            this.btLimpar.Click += new System.EventHandler(this.btLimpar_Click);
-            // 
             // RelatoriosES
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -670,9 +670,9 @@
             this.Text = "Dashboard";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tabelaRelatorio)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tabelaRelatorio)).EndInit();
             this.ResumeLayout(false);
 
         }

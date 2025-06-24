@@ -51,6 +51,8 @@
             this.txtEstoqueMinimo = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.kryptonPanel2 = new Krypton.Toolkit.KryptonPanel();
+            this.label21 = new System.Windows.Forms.Label();
+            this.txtNome = new System.Windows.Forms.TextBox();
             this.txtDataValidade = new System.Windows.Forms.MaskedTextBox();
             this.txtVolume = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
@@ -95,8 +97,6 @@
             this.txtProfundidade = new System.Windows.Forms.TextBox();
             this.txtProducao = new System.Windows.Forms.MaskedTextBox();
             this.kryptonPanel1 = new Krypton.Toolkit.KryptonPanel();
-            this.label21 = new System.Windows.Forms.Label();
-            this.txtNome = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel3)).BeginInit();
             this.kryptonPanel3.SuspendLayout();
@@ -254,7 +254,7 @@
             this.btSalvarMercadoria.StateTracking.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             this.btSalvarMercadoria.StateTracking.Border.Rounding = 20F;
             this.btSalvarMercadoria.StateTracking.Border.Width = 1;
-            this.btSalvarMercadoria.TabIndex = 28;
+            this.btSalvarMercadoria.TabIndex = 29;
             this.btSalvarMercadoria.Values.DropDownArrowColor = System.Drawing.Color.Empty;
             this.btSalvarMercadoria.Values.Text = "Salvar";
             this.btSalvarMercadoria.Click += new System.EventHandler(this.btsalvarMercadoria_Click_1);
@@ -280,7 +280,7 @@
             this.txtCrossdocking.Location = new System.Drawing.Point(19, 349);
             this.txtCrossdocking.Name = "txtCrossdocking";
             this.txtCrossdocking.Size = new System.Drawing.Size(160, 26);
-            this.txtCrossdocking.TabIndex = 26;
+            this.txtCrossdocking.TabIndex = 25;
             // 
             // txtDepartamento
             // 
@@ -306,7 +306,7 @@
             this.txtDepartamento.Location = new System.Drawing.Point(234, 89);
             this.txtDepartamento.Name = "txtDepartamento";
             this.txtDepartamento.Size = new System.Drawing.Size(195, 28);
-            this.txtDepartamento.TabIndex = 22;
+            this.txtDepartamento.TabIndex = 23;
             // 
             // label3
             // 
@@ -341,7 +341,7 @@
             this.txtGtin.Location = new System.Drawing.Point(19, 90);
             this.txtGtin.Name = "txtGtin";
             this.txtGtin.Size = new System.Drawing.Size(177, 26);
-            this.txtGtin.TabIndex = 21;
+            this.txtGtin.TabIndex = 22;
             // 
             // txtEstoqueMaximo
             // 
@@ -352,7 +352,7 @@
             this.txtEstoqueMaximo.Location = new System.Drawing.Point(344, 284);
             this.txtEstoqueMaximo.Name = "txtEstoqueMaximo";
             this.txtEstoqueMaximo.Size = new System.Drawing.Size(85, 26);
-            this.txtEstoqueMaximo.TabIndex = 25;
+            this.txtEstoqueMaximo.TabIndex = 27;
             // 
             // label9
             // 
@@ -375,7 +375,7 @@
             this.txtLocalizacao.Location = new System.Drawing.Point(234, 349);
             this.txtLocalizacao.Name = "txtLocalizacao";
             this.txtLocalizacao.Size = new System.Drawing.Size(195, 26);
-            this.txtLocalizacao.TabIndex = 27;
+            this.txtLocalizacao.TabIndex = 28;
             // 
             // label16
             // 
@@ -401,7 +401,7 @@
             this.txtSituacao.Location = new System.Drawing.Point(19, 283);
             this.txtSituacao.Name = "txtSituacao";
             this.txtSituacao.Size = new System.Drawing.Size(158, 28);
-            this.txtSituacao.TabIndex = 23;
+            this.txtSituacao.TabIndex = 24;
             // 
             // label12
             // 
@@ -424,7 +424,7 @@
             this.txtEstoqueMinimo.Location = new System.Drawing.Point(234, 284);
             this.txtEstoqueMinimo.Name = "txtEstoqueMinimo";
             this.txtEstoqueMinimo.Size = new System.Drawing.Size(85, 26);
-            this.txtEstoqueMinimo.TabIndex = 24;
+            this.txtEstoqueMinimo.TabIndex = 26;
             // 
             // label10
             // 
@@ -493,6 +493,27 @@
             this.kryptonPanel2.Size = new System.Drawing.Size(1245, 696);
             this.kryptonPanel2.TabIndex = 0;
             // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(37)))), ((int)(((byte)(58)))));
+            this.label21.Location = new System.Drawing.Point(187, 66);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(49, 18);
+            this.label21.TabIndex = 21;
+            this.label21.Text = "Nome";
+            // 
+            // txtNome
+            // 
+            this.txtNome.BackColor = System.Drawing.Color.White;
+            this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(37)))), ((int)(((byte)(58)))));
+            this.txtNome.Location = new System.Drawing.Point(187, 89);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(483, 26);
+            this.txtNome.TabIndex = 2;
+            // 
             // txtDataValidade
             // 
             this.txtDataValidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
@@ -500,7 +521,7 @@
             this.txtDataValidade.Mask = "00/00/0000";
             this.txtDataValidade.Name = "txtDataValidade";
             this.txtDataValidade.Size = new System.Drawing.Size(168, 26);
-            this.txtDataValidade.TabIndex = 9;
+            this.txtDataValidade.TabIndex = 10;
             this.txtDataValidade.ValidatingType = typeof(System.DateTime);
             // 
             // txtVolume
@@ -513,7 +534,7 @@
             this.txtVolume.Location = new System.Drawing.Point(130, 349);
             this.txtVolume.Name = "txtVolume";
             this.txtVolume.Size = new System.Drawing.Size(75, 26);
-            this.txtVolume.TabIndex = 11;
+            this.txtVolume.TabIndex = 12;
             // 
             // label18
             // 
@@ -534,7 +555,7 @@
             this.txtVarOpcao.Location = new System.Drawing.Point(266, 549);
             this.txtVarOpcao.Name = "txtVarOpcao";
             this.txtVarOpcao.Size = new System.Drawing.Size(168, 26);
-            this.txtVarOpcao.TabIndex = 20;
+            this.txtVarOpcao.TabIndex = 21;
             // 
             // label14
             // 
@@ -579,7 +600,7 @@
             this.txtVarAtributo.Location = new System.Drawing.Point(37, 549);
             this.txtVarAtributo.Name = "txtVarAtributo";
             this.txtVarAtributo.Size = new System.Drawing.Size(168, 26);
-            this.txtVarAtributo.TabIndex = 19;
+            this.txtVarAtributo.TabIndex = 20;
             // 
             // label2
             // 
@@ -654,7 +675,7 @@
             this.txtItensCaixa.Location = new System.Drawing.Point(37, 412);
             this.txtItensCaixa.Name = "txtItensCaixa";
             this.txtItensCaixa.Size = new System.Drawing.Size(168, 26);
-            this.txtItensCaixa.TabIndex = 17;
+            this.txtItensCaixa.TabIndex = 18;
             // 
             // txtFreteGratis
             // 
@@ -669,7 +690,7 @@
             this.txtFreteGratis.Location = new System.Drawing.Point(37, 347);
             this.txtFreteGratis.Name = "txtFreteGratis";
             this.txtFreteGratis.Size = new System.Drawing.Size(78, 28);
-            this.txtFreteGratis.TabIndex = 10;
+            this.txtFreteGratis.TabIndex = 11;
             // 
             // txtCondicao
             // 
@@ -682,7 +703,7 @@
             this.txtCondicao.Location = new System.Drawing.Point(37, 155);
             this.txtCondicao.Name = "txtCondicao";
             this.txtCondicao.Size = new System.Drawing.Size(131, 28);
-            this.txtCondicao.TabIndex = 4;
+            this.txtCondicao.TabIndex = 3;
             // 
             // label7
             // 
@@ -738,7 +759,7 @@
             this.txtTipo.Location = new System.Drawing.Point(187, 157);
             this.txtTipo.Name = "txtTipo";
             this.txtTipo.Size = new System.Drawing.Size(109, 26);
-            this.txtTipo.TabIndex = 2;
+            this.txtTipo.TabIndex = 4;
             // 
             // label25
             // 
@@ -759,7 +780,7 @@
             this.txtQuantidade.Location = new System.Drawing.Point(315, 155);
             this.txtQuantidade.Name = "txtQuantidade";
             this.txtQuantidade.Size = new System.Drawing.Size(96, 26);
-            this.txtQuantidade.TabIndex = 3;
+            this.txtQuantidade.TabIndex = 5;
             // 
             // txtFormato
             // 
@@ -780,7 +801,7 @@
             this.txtFormato.Location = new System.Drawing.Point(539, 153);
             this.txtFormato.Name = "txtFormato";
             this.txtFormato.Size = new System.Drawing.Size(131, 28);
-            this.txtFormato.TabIndex = 6;
+            this.txtFormato.TabIndex = 7;
             // 
             // label6
             // 
@@ -803,7 +824,7 @@
             this.txtPrecoVenda.Location = new System.Drawing.Point(430, 155);
             this.txtPrecoVenda.Name = "txtPrecoVenda";
             this.txtPrecoVenda.Size = new System.Drawing.Size(90, 26);
-            this.txtPrecoVenda.TabIndex = 5;
+            this.txtPrecoVenda.TabIndex = 6;
             // 
             // label4
             // 
@@ -852,7 +873,7 @@
             this.txtUnidadeMedida.Location = new System.Drawing.Point(271, 412);
             this.txtUnidadeMedida.Name = "txtUnidadeMedida";
             this.txtUnidadeMedida.Size = new System.Drawing.Size(168, 28);
-            this.txtUnidadeMedida.TabIndex = 18;
+            this.txtUnidadeMedida.TabIndex = 19;
             // 
             // txtLargura
             // 
@@ -864,7 +885,7 @@
             this.txtLargura.Location = new System.Drawing.Point(441, 349);
             this.txtLargura.Name = "txtLargura";
             this.txtLargura.Size = new System.Drawing.Size(62, 26);
-            this.txtLargura.TabIndex = 14;
+            this.txtLargura.TabIndex = 15;
             // 
             // txtPesoBruto
             // 
@@ -876,7 +897,7 @@
             this.txtPesoBruto.Location = new System.Drawing.Point(356, 349);
             this.txtPesoBruto.Name = "txtPesoBruto";
             this.txtPesoBruto.Size = new System.Drawing.Size(62, 26);
-            this.txtPesoBruto.TabIndex = 13;
+            this.txtPesoBruto.TabIndex = 14;
             // 
             // txtAltura
             // 
@@ -888,7 +909,7 @@
             this.txtAltura.Location = new System.Drawing.Point(526, 349);
             this.txtAltura.Name = "txtAltura";
             this.txtAltura.Size = new System.Drawing.Size(62, 26);
-            this.txtAltura.TabIndex = 15;
+            this.txtAltura.TabIndex = 16;
             // 
             // txtCodigo
             // 
@@ -911,7 +932,7 @@
             this.txtPesoLiquido.Location = new System.Drawing.Point(271, 349);
             this.txtPesoLiquido.Name = "txtPesoLiquido";
             this.txtPesoLiquido.Size = new System.Drawing.Size(62, 26);
-            this.txtPesoLiquido.TabIndex = 12;
+            this.txtPesoLiquido.TabIndex = 13;
             // 
             // label5
             // 
@@ -960,7 +981,7 @@
             this.txtMarca.Location = new System.Drawing.Point(37, 284);
             this.txtMarca.Name = "txtMarca";
             this.txtMarca.Size = new System.Drawing.Size(168, 26);
-            this.txtMarca.TabIndex = 7;
+            this.txtMarca.TabIndex = 8;
             // 
             // label8
             // 
@@ -1011,7 +1032,7 @@
             this.txtProfundidade.Location = new System.Drawing.Point(611, 349);
             this.txtProfundidade.Name = "txtProfundidade";
             this.txtProfundidade.Size = new System.Drawing.Size(62, 26);
-            this.txtProfundidade.TabIndex = 16;
+            this.txtProfundidade.TabIndex = 17;
             // 
             // txtProducao
             // 
@@ -1020,7 +1041,7 @@
             this.txtProducao.Mask = "00/00/0000";
             this.txtProducao.Name = "txtProducao";
             this.txtProducao.Size = new System.Drawing.Size(168, 26);
-            this.txtProducao.TabIndex = 8;
+            this.txtProducao.TabIndex = 9;
             this.txtProducao.ValidatingType = typeof(System.DateTime);
             // 
             // kryptonPanel1
@@ -1034,27 +1055,6 @@
             this.kryptonPanel1.PanelBackStyle = Krypton.Toolkit.PaletteBackStyle.GridBackgroundCustom1;
             this.kryptonPanel1.Size = new System.Drawing.Size(1245, 92);
             this.kryptonPanel1.TabIndex = 0;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(37)))), ((int)(((byte)(58)))));
-            this.label21.Location = new System.Drawing.Point(187, 66);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(49, 18);
-            this.label21.TabIndex = 21;
-            this.label21.Text = "Nome";
-            // 
-            // txtNome
-            // 
-            this.txtNome.BackColor = System.Drawing.Color.White;
-            this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(37)))), ((int)(((byte)(58)))));
-            this.txtNome.Location = new System.Drawing.Point(187, 89);
-            this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(483, 26);
-            this.txtNome.TabIndex = 22;
             // 
             // CadastroMerc
             // 

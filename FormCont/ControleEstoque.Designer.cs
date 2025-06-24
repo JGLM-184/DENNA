@@ -394,7 +394,7 @@
             // btBuscarMercFull
             // 
             this.btBuscarMercFull.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btBuscarMercFull.Location = new System.Drawing.Point(564, 102);
+            this.btBuscarMercFull.Location = new System.Drawing.Point(564, 109);
             this.btBuscarMercFull.Name = "btBuscarMercFull";
             this.btBuscarMercFull.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.btBuscarMercFull.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
@@ -406,7 +406,7 @@
             this.btBuscarMercFull.OverrideDefault.Border.Rounding = 20F;
             this.btBuscarMercFull.OverrideDefault.Border.Width = 1;
             this.btBuscarMercFull.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.btBuscarMercFull.Size = new System.Drawing.Size(73, 64);
+            this.btBuscarMercFull.Size = new System.Drawing.Size(53, 50);
             this.btBuscarMercFull.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.btBuscarMercFull.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
             this.btBuscarMercFull.StateCommon.Back.ColorAngle = 45F;
@@ -445,7 +445,7 @@
             // btEditar
             // 
             this.btEditar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btEditar.Location = new System.Drawing.Point(678, 102);
+            this.btEditar.Location = new System.Drawing.Point(626, 109);
             this.btEditar.Name = "btEditar";
             this.btEditar.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.btEditar.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
@@ -457,7 +457,7 @@
             this.btEditar.OverrideDefault.Border.Rounding = 20F;
             this.btEditar.OverrideDefault.Border.Width = 1;
             this.btEditar.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.btEditar.Size = new System.Drawing.Size(73, 64);
+            this.btEditar.Size = new System.Drawing.Size(53, 50);
             this.btEditar.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.btEditar.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
             this.btEditar.StateCommon.Back.ColorAngle = 45F;
@@ -508,7 +508,7 @@
             this.btDeletar.OverrideDefault.Border.Rounding = 20F;
             this.btDeletar.OverrideDefault.Border.Width = 1;
             this.btDeletar.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.btDeletar.Size = new System.Drawing.Size(64, 56);
+            this.btDeletar.Size = new System.Drawing.Size(53, 50);
             this.btDeletar.StateCommon.Back.Color1 = System.Drawing.Color.Red;
             this.btDeletar.StateCommon.Back.Color2 = System.Drawing.Color.Red;
             this.btDeletar.StateCommon.Back.ColorAngle = 45F;
@@ -575,7 +575,7 @@
             // btLimpar
             // 
             this.btLimpar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btLimpar.Location = new System.Drawing.Point(1007, 106);
+            this.btLimpar.Location = new System.Drawing.Point(720, 109);
             this.btLimpar.Name = "btLimpar";
             this.btLimpar.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.btLimpar.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
@@ -587,7 +587,7 @@
             this.btLimpar.OverrideDefault.Border.Rounding = 20F;
             this.btLimpar.OverrideDefault.Border.Width = 1;
             this.btLimpar.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.btLimpar.Size = new System.Drawing.Size(64, 56);
+            this.btLimpar.Size = new System.Drawing.Size(53, 50);
             this.btLimpar.StateCommon.Back.Color1 = System.Drawing.Color.DarkBlue;
             this.btLimpar.StateCommon.Back.Color2 = System.Drawing.Color.DarkBlue;
             this.btLimpar.StateCommon.Back.ColorAngle = 45F;

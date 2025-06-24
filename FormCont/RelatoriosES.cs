@@ -99,6 +99,8 @@ namespace FormCont
             tabelaRelatorio.DataSource = null;
             tabelaRelatorio.Rows.Clear();
             txtCodigoBusca.Clear();
+            rdbMes.Checked = false;
+            rdbPeriodo.Checked = false;
         }
     }
 }

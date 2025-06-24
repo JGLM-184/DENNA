@@ -59,7 +59,7 @@ namespace FormCont
                     cadastrarMerc.Nome = txtNome.Text;
                     cadastrarMerc.Formato = txtFormato.Text;
                     cadastrarMerc.Tipo = txtTipo.Text;
-                    cadastrarMerc.Preco_Venda = txtPrecoVenda.Text;
+                    cadastrarMerc.Preco_Venda = float.Parse(txtPrecoVenda.Text);
                     cadastrarMerc.Quantidade = int.Parse(txtQuantidade.Text);
                     cadastrarMerc.Condicao = txtCondicao.Text;
                     cadastrarMerc.Situacao = txtSituacao.Text;
@@ -151,14 +151,14 @@ namespace FormCont
 
             // Permitir números, vírgula, ponto e backspace
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
-                e.KeyChar != ',' && e.KeyChar != '.')
+                e.KeyChar != ',')
             {
                 e.Handled = true;
             }
 
             // Impede mais de uma vírgula ou ponto
-            if ((e.KeyChar == ',' || e.KeyChar == '.') &&
-                (txt.Text.Contains(",") || txt.Text.Contains(".")))
+            if ((e.KeyChar == ',') &&
+                (txt.Text.Contains(",")))
             {
                 e.Handled = true;
             }

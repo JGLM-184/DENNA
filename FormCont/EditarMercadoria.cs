@@ -106,7 +106,7 @@ namespace FormCont
                 attMerc.Producao = txtProducao.Text;
                 attMerc.Data_Validade = txtDataValidade.Text;
                 attMerc.Frete_Gratis = txtFreteGratis.Text;
-                attMerc.Preco_Venda = txtPrecoVenda.Text;
+                attMerc.Preco_Venda = float.Parse(txtPrecoVenda.Text);
                 attMerc.Volumes = float.Parse(txtVolume.Text);
                 attMerc.Peso_Liquido = float.Parse(txtPesoLiquido.Text);
                 attMerc.Peso_Bruto = float.Parse(txtPesoBruto.Text);
@@ -190,14 +190,14 @@ namespace FormCont
 
             // Permitir números, vírgula, ponto e backspace
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
-                e.KeyChar != ',' && e.KeyChar != '.')
+                e.KeyChar != ',')
             {
                 e.Handled = true;
             }
 
             // Impede mais de uma vírgula ou ponto
-            if ((e.KeyChar == ',' || e.KeyChar == '.') &&
-                (txt.Text.Contains(",") || txt.Text.Contains(".")))
+            if ((e.KeyChar == ',') &&
+                (txt.Text.Contains(",")))
             {
                 e.Handled = true;
             }

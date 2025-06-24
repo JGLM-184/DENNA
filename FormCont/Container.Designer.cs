@@ -35,8 +35,6 @@
             this.painelLateral = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.bt_deslogar = new System.Windows.Forms.PictureBox();
-            this.bt_fechar = new System.Windows.Forms.PictureBox();
-            this.bt_configuracoes = new System.Windows.Forms.PictureBox();
             this.kryptonPictureBox1 = new Krypton.Toolkit.KryptonPictureBox();
             this.btCurvaABC = new System.Windows.Forms.Button();
             this.labelCadastro = new System.Windows.Forms.Label();
@@ -47,11 +45,10 @@
             this.bt_relEntradaSaida = new System.Windows.Forms.Button();
             this.bt_nt_entrada = new System.Windows.Forms.Button();
             this.bt_cadastro_merc = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.painelLateral.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bt_deslogar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bt_fechar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bt_configuracoes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSuprimentos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picRelatorios)).BeginInit();
@@ -116,9 +113,8 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.bt_deslogar);
-            this.panel1.Controls.Add(this.bt_fechar);
-            this.panel1.Controls.Add(this.bt_configuracoes);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 621);
             this.panel1.Name = "panel1";
@@ -129,7 +125,7 @@
             // 
             this.bt_deslogar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.bt_deslogar.Image = ((System.Drawing.Image)(resources.GetObject("bt_deslogar.Image")));
-            this.bt_deslogar.Location = new System.Drawing.Point(23, 9);
+            this.bt_deslogar.Location = new System.Drawing.Point(38, 9);
             this.bt_deslogar.Margin = new System.Windows.Forms.Padding(0);
             this.bt_deslogar.Name = "bt_deslogar";
             this.bt_deslogar.Size = new System.Drawing.Size(32, 31);
@@ -137,32 +133,6 @@
             this.bt_deslogar.TabIndex = 28;
             this.bt_deslogar.TabStop = false;
             this.bt_deslogar.Click += new System.EventHandler(this.bt_deslogar_Click_1);
-            // 
-            // bt_fechar
-            // 
-            this.bt_fechar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.bt_fechar.Image = ((System.Drawing.Image)(resources.GetObject("bt_fechar.Image")));
-            this.bt_fechar.Location = new System.Drawing.Point(145, 9);
-            this.bt_fechar.Margin = new System.Windows.Forms.Padding(0);
-            this.bt_fechar.Name = "bt_fechar";
-            this.bt_fechar.Size = new System.Drawing.Size(30, 31);
-            this.bt_fechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.bt_fechar.TabIndex = 24;
-            this.bt_fechar.TabStop = false;
-            this.bt_fechar.Click += new System.EventHandler(this.bt_fechar_Click);
-            // 
-            // bt_configuracoes
-            // 
-            this.bt_configuracoes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.bt_configuracoes.Image = ((System.Drawing.Image)(resources.GetObject("bt_configuracoes.Image")));
-            this.bt_configuracoes.Location = new System.Drawing.Point(81, 9);
-            this.bt_configuracoes.Margin = new System.Windows.Forms.Padding(0);
-            this.bt_configuracoes.Name = "bt_configuracoes";
-            this.bt_configuracoes.Size = new System.Drawing.Size(30, 31);
-            this.bt_configuracoes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bt_configuracoes.TabIndex = 8;
-            this.bt_configuracoes.TabStop = false;
-            this.bt_configuracoes.Click += new System.EventHandler(this.bt_configuracoes_Click);
             // 
             // kryptonPictureBox1
             // 
@@ -181,7 +151,7 @@
             this.btCurvaABC.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.btCurvaABC.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(55)))), ((int)(((byte)(88)))));
             this.btCurvaABC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btCurvaABC.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btCurvaABC.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btCurvaABC.ForeColor = System.Drawing.Color.White;
             this.btCurvaABC.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btCurvaABC.Location = new System.Drawing.Point(-3, 422);
@@ -264,7 +234,7 @@
             this.bt_relEntradaSaida.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.bt_relEntradaSaida.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(55)))), ((int)(((byte)(88)))));
             this.bt_relEntradaSaida.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_relEntradaSaida.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_relEntradaSaida.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_relEntradaSaida.ForeColor = System.Drawing.Color.White;
             this.bt_relEntradaSaida.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bt_relEntradaSaida.Location = new System.Drawing.Point(-3, 374);
@@ -284,7 +254,7 @@
             this.bt_nt_entrada.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.bt_nt_entrada.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(55)))), ((int)(((byte)(88)))));
             this.bt_nt_entrada.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_nt_entrada.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_nt_entrada.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_nt_entrada.ForeColor = System.Drawing.Color.White;
             this.bt_nt_entrada.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bt_nt_entrada.Location = new System.Drawing.Point(-2, 262);
@@ -316,6 +286,17 @@
             this.bt_cadastro_merc.UseVisualStyleBackColor = false;
             this.bt_cadastro_merc.Click += new System.EventHandler(this.bt_cadastro_merc_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(74, 15);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(60, 18);
+            this.label1.TabIndex = 29;
+            this.label1.Text = "Logout";
+            // 
             // Container
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -337,9 +318,8 @@
             this.painelLateral.ResumeLayout(false);
             this.painelLateral.PerformLayout();
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bt_deslogar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bt_fechar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bt_configuracoes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSuprimentos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picRelatorios)).EndInit();
@@ -355,7 +335,6 @@
         private System.Windows.Forms.Label labelSuprimentos;
         private System.Windows.Forms.Button bt_relEntradaSaida;
         private System.Windows.Forms.Label labelRelatorios;
-        private System.Windows.Forms.PictureBox bt_configuracoes;
         private System.Windows.Forms.Label lblUsuario;
         private System.Windows.Forms.Panel painelLateral;
         private System.Windows.Forms.PictureBox picCadastro;
@@ -363,10 +342,10 @@
         private System.Windows.Forms.PictureBox picRelatorios;
         private System.Windows.Forms.Label labelCadastro;
         private System.Windows.Forms.Button btCurvaABC;
-        private System.Windows.Forms.PictureBox bt_fechar;
         private Krypton.Toolkit.KryptonPictureBox kryptonPictureBox1;
         private System.Windows.Forms.PictureBox bt_deslogar;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label1;
     }
 }
 
