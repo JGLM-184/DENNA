@@ -614,7 +614,7 @@ namespace FormCont
             try
             {
                 // Constrói a base da consulta
-                string sql = "SELECT ID , Tipo , Marca , Formato FROM mercadorias WHERE 1=1";
+                string sql = "SELECT ID , codigo, Tipo , Marca , Formato FROM mercadorias WHERE 1=1";
                 MySqlCommand cmd = new MySqlCommand();
                 cmd.Connection = MysqlConexaoBD;
 
@@ -645,7 +645,7 @@ namespace FormCont
                 // Se nenhum campo foi preenchido
                 if (cmd.Parameters.Count == 0)
                 {
-                    sql = "SELECT ID , Tipo , Marca , Formato FROM mercadorias";
+                    sql = "SELECT ID , Codigo , Tipo , Marca , Formato FROM mercadorias";
                 }
 
                 // Atribui a SQL final
@@ -655,6 +655,7 @@ namespace FormCont
                 MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
                 adapter.Fill(tabelaShow);
                 tabela1.DataSource = tabelaShow;
+                tabela1.Columns["ID"].Visible = false;
                 return tabela1;
             }
             catch (Exception ex)

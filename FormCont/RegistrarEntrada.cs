@@ -139,7 +139,7 @@ namespace FormCont
             }
             catch (Exception ex)
             {
-                MessageBox.Show(" Erro " + ex);
+                MessageBox.Show("Erro: " + ex);
             }
         }
 
