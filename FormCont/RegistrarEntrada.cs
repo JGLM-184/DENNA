@@ -57,16 +57,15 @@ namespace FormCont
             }
 
             dateMov.Text = DateTime.Now.ToString();
-        }
-
-        private void registrar_Click(object sender, EventArgs e)
+        } 
+               
+        private void btRegistrarEntrada_Click(object sender, EventArgs e)
         {
-
             if (tabela.SelectedRows.Count == 1)
             {
                 try
                 {
-                    
+
                     var row = tabela.SelectedRows[0];
                     string codigo = row.Cells["ID"].Value.ToString();
 
@@ -92,7 +91,7 @@ namespace FormCont
                             }
                             else
                                 comandoSql.Parameters.AddWithValue("@Tipo_movimento", rdSaida.Text.ToString());
-                            
+
                             comandoSql.Parameters.AddWithValue("@Quantidade", quantMov.Text.ToString());
                             comandoSql.Parameters.AddWithValue("@Preco_unitario_movimento", Double.Parse(precUnimov.Text.ToString()));
                             comandoSql.Parameters.AddWithValue("@Data_hora_movimento", DateTime.Now);
@@ -115,10 +114,14 @@ namespace FormCont
             }
         }
 
- 
-        private void teste_Click(object sender, EventArgs e)
+        private void btDesmarcar_Click(object sender, EventArgs e)
         {
+            dateMov.Text = DateTime.Now.ToString();
 
+        }
+
+        private void btPesquisar_Click_1(object sender, EventArgs e)
+        {
             string buscaCod = txt1.Text.Trim();
             string buscaTip = txt2.Text.Trim();
             string buscaMarc = txt3.Text.Trim();
@@ -129,67 +132,11 @@ namespace FormCont
             try
             {
                 buscarReg.PesquisaReg(MysqlConexaoBanco, tabela, buscaCod, buscaTip, buscaMarc, buscaForma);
-            } catch (Exception ex)
-            {
-                MessageBox.Show(" Erro " + ex);
-            }
-            
-            
-        }
-
-        private void updtTime_Click(object sender, EventArgs e)
-        {
-            dateMov.Text = DateTime.Now.ToString();
-        }
-    }
- }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
- * private void listar_todos_Click(object sender, EventArgs e)
-        {
-            MysqlConexaoBanco.Open();
-            // tabela.AutoGenerateColumns = true;
-            try
-            {
-                Mercadoria listarMerc = new Mercadoria();
-
-                dataTable = listarMerc.listarMercadorias();
-
-                if (dataTable != null && dataTable.Rows.Count > 0)
-                {
-                    tabela.DataSource = dataTable;
-                }
-                else
-                {
-                    MessageBox.Show("Nenhum registro encontrado.");
-                }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro ao buscar dados: " + ex.Message);
-            }
-            finally
-            {
-                MysqlConexaoBanco.Close();
+                MessageBox.Show(" Erro " + ex);
             }
         }
-*/
-
+    }
+ }

@@ -604,6 +604,68 @@ namespace FormCont
         }
 
 
+        public DataGridView PesquisaReg(MySqlConnection MysqlConexaoBD, DataGridView tabela1, string cod, string tipo, string marca, string combo)
+        {
 
+            DataTable tabelaShow = new DataTable();
+
+            MysqlConexaoBD.Open();
+
+            try
+            {
+                // Constrói a base da consulta
+                string sql = "SELECT ID , Tipo , Marca , Formato FROM mercadorias WHERE 1=1";
+                MySqlCommand cmd = new MySqlCommand();
+                cmd.Connection = MysqlConexaoBD;
+
+                if (!string.IsNullOrWhiteSpace(cod))
+                {
+                    sql += " AND codigo LIKE @cod";
+                    cmd.Parameters.AddWithValue("@cod", "%" + cod + "%");
+                }
+
+                if (!string.IsNullOrWhiteSpace(marca))
+                {
+                    sql += " AND Marca LIKE @marca";
+                    cmd.Parameters.AddWithValue("@marca", "%" + marca + "%");
+                }
+
+                if (!string.IsNullOrWhiteSpace(tipo))
+                {
+                    sql += " AND Tipo LIKE @tipo";
+                    cmd.Parameters.AddWithValue("@tipo", "%" + tipo + "%");
+                }
+
+                if (!string.IsNullOrWhiteSpace(combo))
+                {
+                    sql += " AND Formato LIKE @combo";
+                    cmd.Parameters.AddWithValue("@combo", "%" + combo + "%");
+                }
+
+                // Se nenhum campo foi preenchido
+                if (cmd.Parameters.Count == 0)
+                {
+                    sql = "SELECT ID , Tipo , Marca , Formato FROM mercadorias";
+                }
+
+                // Atribui a SQL final
+                cmd.CommandText = sql;
+
+                // Executa
+                MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
+                adapter.Fill(tabelaShow);
+                tabela1.DataSource = tabelaShow;
+                return tabela1;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao realizar a busca: " + ex.Message);
+                return null;
+            }
+            finally
+            {
+                MysqlConexaoBD.Close();
+            }
+        }
     }
 }

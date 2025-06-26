@@ -17,6 +17,7 @@ namespace FormCont
         CadastroMerc cadastro_merc;
         RelatoriosES relatorios;
         CurvaABC curva;
+        RegistrarEntrada registrar;
 
 
 
@@ -150,7 +151,23 @@ namespace FormCont
 
         private void bt_nt_entrada_Click(object sender, EventArgs e)
         {
+            if (registrar == null)
+            {
+                registrar = new RegistrarEntrada();
+                registrar.FormClosed += Registrar_FormClosed;
+                registrar.MdiParent = this;
+                registrar.Dock = DockStyle.Fill;
+                registrar.Show();
+            }
+            else
+            {
+                registrar.Activate();
+            }
+        }
+        private void Registrar_FormClosed(object sender, FormClosedEventArgs e)
 
+        {
+            registrar = null;
         }
     }
 }
