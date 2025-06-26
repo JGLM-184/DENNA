@@ -21,6 +21,10 @@ namespace FormCont
         public RegistrarEntrada()
         {
             InitializeComponent();
+            txt1.KeyPress += ApenasNumeros_KeyPress;
+            quantMov.KeyPress += ApenasNumeros_KeyPress;
+            precUnimov.KeyPress += ApenasDecimais_KeyPress;
+
 
             MysqlConexaoBanco.Open();
 
@@ -136,6 +140,38 @@ namespace FormCont
             catch (Exception ex)
             {
                 MessageBox.Show(" Erro " + ex);
+            }
+        }
+
+
+
+
+        //Máscara número inteiro
+        private void ApenasNumeros_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        //Máscara número decimal
+        private void ApenasDecimais_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            TextBox txt = sender as TextBox;
+
+            // Permitir números, vírgula, ponto e backspace
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+                e.KeyChar != ',')
+            {
+                e.Handled = true;
+            }
+
+            // Impede mais de uma vírgula ou ponto
+            if ((e.KeyChar == ',') &&
+                (txt.Text.Contains(",")))
+            {
+                e.Handled = true;
             }
         }
     }

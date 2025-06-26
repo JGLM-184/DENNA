@@ -50,34 +50,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtCodigoBusca = new System.Windows.Forms.TextBox();
             this.tabelaRelatorio = new System.Windows.Forms.DataGridView();
-            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Unidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Formato = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Condicao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Situacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Preco_Venda = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Marca = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Producao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Data_Validade = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Frete = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Volumes = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Peso_Liquido = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Peso_Bruto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Largura = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Altura = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Profundidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Itens_Caixa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Unidade_Medida = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.VarAtributo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.VarOpcao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GTIN = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GTIN_Tributario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Departamento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Estoque_Minimo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Estoque_Maximo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Crossdocking = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Localizacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -345,6 +317,7 @@
             this.btExportar.TabIndex = 77;
             this.btExportar.Values.DropDownArrowColor = System.Drawing.Color.Empty;
             this.btExportar.Values.Text = "Exportar";
+            this.btExportar.Click += new System.EventHandler(this.btExportar_Click);
             // 
             // btGerarRelatorio
             // 
@@ -435,35 +408,6 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.tabelaRelatorio.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.tabelaRelatorio.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tabelaRelatorio.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Codigo,
-            this.Unidade,
-            this.Formato,
-            this.Condicao,
-            this.Tipo,
-            this.Situacao,
-            this.Preco_Venda,
-            this.Marca,
-            this.Producao,
-            this.Data_Validade,
-            this.Frete,
-            this.Volumes,
-            this.Peso_Liquido,
-            this.Peso_Bruto,
-            this.Largura,
-            this.Altura,
-            this.Profundidade,
-            this.Itens_Caixa,
-            this.Unidade_Medida,
-            this.VarAtributo,
-            this.VarOpcao,
-            this.GTIN,
-            this.GTIN_Tributario,
-            this.Departamento,
-            this.Estoque_Minimo,
-            this.Estoque_Maximo,
-            this.Crossdocking,
-            this.Localizacao});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -486,174 +430,6 @@
             this.tabelaRelatorio.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.tabelaRelatorio.Size = new System.Drawing.Size(1133, 353);
             this.tabelaRelatorio.TabIndex = 67;
-            // 
-            // Codigo
-            // 
-            this.Codigo.HeaderText = "Código";
-            this.Codigo.Name = "Codigo";
-            this.Codigo.Visible = false;
-            // 
-            // Unidade
-            // 
-            this.Unidade.HeaderText = "Unidade";
-            this.Unidade.Name = "Unidade";
-            this.Unidade.Visible = false;
-            // 
-            // Formato
-            // 
-            this.Formato.HeaderText = "Formato";
-            this.Formato.Name = "Formato";
-            this.Formato.Visible = false;
-            // 
-            // Condicao
-            // 
-            this.Condicao.HeaderText = "Condição";
-            this.Condicao.Name = "Condicao";
-            this.Condicao.Visible = false;
-            // 
-            // Tipo
-            // 
-            this.Tipo.HeaderText = "Tipo";
-            this.Tipo.Name = "Tipo";
-            this.Tipo.Visible = false;
-            // 
-            // Situacao
-            // 
-            this.Situacao.HeaderText = "Situação";
-            this.Situacao.Name = "Situacao";
-            this.Situacao.Visible = false;
-            // 
-            // Preco_Venda
-            // 
-            this.Preco_Venda.HeaderText = "Preço de venda";
-            this.Preco_Venda.Name = "Preco_Venda";
-            this.Preco_Venda.Visible = false;
-            // 
-            // Marca
-            // 
-            this.Marca.HeaderText = "Marca";
-            this.Marca.Name = "Marca";
-            this.Marca.Visible = false;
-            // 
-            // Producao
-            // 
-            this.Producao.HeaderText = "Produção";
-            this.Producao.Name = "Producao";
-            this.Producao.Visible = false;
-            // 
-            // Data_Validade
-            // 
-            this.Data_Validade.HeaderText = "Data de validade";
-            this.Data_Validade.Name = "Data_Validade";
-            this.Data_Validade.Visible = false;
-            // 
-            // Frete
-            // 
-            this.Frete.HeaderText = "Frete grátis";
-            this.Frete.Name = "Frete";
-            this.Frete.Visible = false;
-            // 
-            // Volumes
-            // 
-            this.Volumes.HeaderText = "Volumes";
-            this.Volumes.Name = "Volumes";
-            this.Volumes.Visible = false;
-            // 
-            // Peso_Liquido
-            // 
-            this.Peso_Liquido.HeaderText = "Peso líquido";
-            this.Peso_Liquido.Name = "Peso_Liquido";
-            this.Peso_Liquido.Visible = false;
-            // 
-            // Peso_Bruto
-            // 
-            this.Peso_Bruto.HeaderText = "Peso bruto";
-            this.Peso_Bruto.Name = "Peso_Bruto";
-            this.Peso_Bruto.Visible = false;
-            // 
-            // Largura
-            // 
-            this.Largura.HeaderText = "Largura";
-            this.Largura.Name = "Largura";
-            this.Largura.Visible = false;
-            // 
-            // Altura
-            // 
-            this.Altura.HeaderText = "Altura";
-            this.Altura.Name = "Altura";
-            this.Altura.Visible = false;
-            // 
-            // Profundidade
-            // 
-            this.Profundidade.HeaderText = "Profundidade";
-            this.Profundidade.Name = "Profundidade";
-            this.Profundidade.Visible = false;
-            // 
-            // Itens_Caixa
-            // 
-            this.Itens_Caixa.HeaderText = "Itens p/ caixa";
-            this.Itens_Caixa.Name = "Itens_Caixa";
-            this.Itens_Caixa.Visible = false;
-            // 
-            // Unidade_Medida
-            // 
-            this.Unidade_Medida.HeaderText = "Unidade de medida";
-            this.Unidade_Medida.Name = "Unidade_Medida";
-            this.Unidade_Medida.Visible = false;
-            // 
-            // VarAtributo
-            // 
-            this.VarAtributo.HeaderText = "Variação atributo";
-            this.VarAtributo.Name = "VarAtributo";
-            this.VarAtributo.Visible = false;
-            // 
-            // VarOpcao
-            // 
-            this.VarOpcao.HeaderText = "Variação opção";
-            this.VarOpcao.Name = "VarOpcao";
-            this.VarOpcao.Visible = false;
-            // 
-            // GTIN
-            // 
-            this.GTIN.HeaderText = "GTIN/EAN";
-            this.GTIN.Name = "GTIN";
-            this.GTIN.Visible = false;
-            // 
-            // GTIN_Tributario
-            // 
-            this.GTIN_Tributario.HeaderText = "GTIN/EAN Tributário";
-            this.GTIN_Tributario.Name = "GTIN_Tributario";
-            this.GTIN_Tributario.Visible = false;
-            // 
-            // Departamento
-            // 
-            this.Departamento.HeaderText = "Departamento";
-            this.Departamento.Name = "Departamento";
-            this.Departamento.Visible = false;
-            // 
-            // Estoque_Minimo
-            // 
-            this.Estoque_Minimo.HeaderText = "Estoque mínimo";
-            this.Estoque_Minimo.Name = "Estoque_Minimo";
-            this.Estoque_Minimo.Visible = false;
-            // 
-            // Estoque_Maximo
-            // 
-            this.Estoque_Maximo.HeaderText = "Estoque máximo";
-            this.Estoque_Maximo.Name = "Estoque_Maximo";
-            this.Estoque_Maximo.Visible = false;
-            // 
-            // Crossdocking
-            // 
-            this.Crossdocking.HeaderText = "Crossdocking";
-            this.Crossdocking.Name = "Crossdocking";
-            this.Crossdocking.Visible = false;
-            // 
-            // Localizacao
-            // 
-            this.Localizacao.HeaderText = "Localização";
-            this.Localizacao.Name = "Localizacao";
-            this.Localizacao.Visible = false;
             // 
             // RelatoriosES
             // 
@@ -688,34 +464,6 @@
         private System.Windows.Forms.DateTimePicker dtFinal;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView tabelaRelatorio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Unidade;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Formato;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Condicao;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Tipo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Situacao;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Preco_Venda;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Marca;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Producao;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Data_Validade;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Frete;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Volumes;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Peso_Liquido;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Peso_Bruto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Largura;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Altura;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Profundidade;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Itens_Caixa;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Unidade_Medida;
-        private System.Windows.Forms.DataGridViewTextBoxColumn VarAtributo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn VarOpcao;
-        private System.Windows.Forms.DataGridViewTextBoxColumn GTIN;
-        private System.Windows.Forms.DataGridViewTextBoxColumn GTIN_Tributario;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Departamento;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Estoque_Minimo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Estoque_Maximo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Crossdocking;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Localizacao;
         private Krypton.Toolkit.KryptonButton btGerarRelatorio;
         private Krypton.Toolkit.KryptonButton btExportar;
         private System.Windows.Forms.GroupBox groupBox2;

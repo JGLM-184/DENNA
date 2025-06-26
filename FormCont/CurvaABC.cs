@@ -1,8 +1,11 @@
-﻿using MySql.Data.MySqlClient;
+﻿using iTextSharp.text;
+using iTextSharp.text.pdf;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
@@ -52,7 +55,7 @@ namespace FormCont
                     adapter.Fill(dt);
                     tabelaCurvaABC.DataSource = dt;
 
-                    tabelaCurvaABC.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 12, FontStyle.Bold);
+                    tabelaCurvaABC.ColumnHeadersDefaultCellStyle.Font = new System.Drawing.Font("Segoe UI", 12, FontStyle.Bold);
                     tabelaCurvaABC.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
                     tabelaCurvaABC.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
                     tabelaCurvaABC.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
@@ -194,6 +197,140 @@ namespace FormCont
         {
             tabelaCurvaABC.DataSource = null;
             tabelaCurvaABC.Rows.Clear();
+
+            chartReal.Series.Clear();
+            chartReal.Titles.Clear();
+            chartReal.ChartAreas.Clear();
         }
+
+        private void btExportar_Click(object sender, EventArgs e)
+        {
+            if (tabelaCurvaABC.Rows.Count == 0)
+            {
+                MessageBox.Show("Não há dados para exportar.");
+                return;
+            }
+
+            // Nome do arquivo com data
+            string nomeArquivo = $"CurvaABC_{DateTime.Now:yyyy-MM-dd}.pdf";
+
+            SaveFileDialog salvar = new SaveFileDialog
+            {
+                Filter = "PDF files (*.pdf)|*.pdf",
+                Title = "Salvar Relatório Curva ABC em PDF",
+                FileName = nomeArquivo
+            };
+
+            if (salvar.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    using (FileStream fs = new FileStream(salvar.FileName, FileMode.Create, FileAccess.Write, FileShare.None))
+                    using (Document doc = new Document(PageSize.A4.Rotate(), 20f, 20f, 20f, 20f))
+                    {
+                        PdfWriter writer = PdfWriter.GetInstance(doc, fs);
+                        doc.Open();
+
+                        // Fontes
+                        var fonteTitulo = new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.HELVETICA, 16, iTextSharp.text.Font.BOLD);
+                        var fonteCabecalho = new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.HELVETICA, 12, iTextSharp.text.Font.BOLD);
+                        var fonteCelula = new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.HELVETICA, 11, iTextSharp.text.Font.NORMAL);
+
+                        // Título
+                        Paragraph titulo = new Paragraph("Relatório Curva ABC", fonteTitulo);
+                        titulo.Alignment = Element.ALIGN_CENTER;
+                        titulo.SpacingAfter = 20f;
+                        doc.Add(titulo);
+
+                        // --- Tabela ---
+                        PdfPTable tabelaPDF = new PdfPTable(tabelaCurvaABC.Columns.Count);
+                        tabelaPDF.WidthPercentage = 100;
+
+                        // Cabeçalhos
+                        foreach (DataGridViewColumn col in tabelaCurvaABC.Columns)
+                        {
+                            PdfPCell cell = new PdfPCell(new Phrase(col.HeaderText, fonteCabecalho));
+                            cell.BackgroundColor = BaseColor.LIGHT_GRAY;
+                            cell.HorizontalAlignment = Element.ALIGN_CENTER;
+                            tabelaPDF.AddCell(cell);
+                        }
+
+                        // Dados
+                        foreach (DataGridViewRow row in tabelaCurvaABC.Rows)
+                        {
+                            if (!row.IsNewRow)
+                            {
+                                foreach (DataGridViewCell cell in row.Cells)
+                                {
+                                    tabelaPDF.AddCell(new Phrase(cell.Value?.ToString() ?? "", fonteCelula));
+                                }
+                            }
+                        }
+
+                        doc.Add(tabelaPDF);
+
+                        // Espaço entre tabela e gráficos
+                        doc.Add(new Paragraph("\n"));
+
+                        // --- Gráficos lado a lado ---
+
+                        // Salva os gráficos como imagens temporárias
+                        System.Drawing.Bitmap bmpIdeal = new System.Drawing.Bitmap(chartIdeal.Width, chartIdeal.Height);
+                        chartIdeal.DrawToBitmap(bmpIdeal, new System.Drawing.Rectangle(0, 0, chartIdeal.Width, chartIdeal.Height));
+                        string imgPathIdeal = System.IO.Path.GetTempFileName();
+                        bmpIdeal.Save(imgPathIdeal, System.Drawing.Imaging.ImageFormat.Png);
+
+                        System.Drawing.Bitmap bmpReal = new System.Drawing.Bitmap(chartReal.Width, chartReal.Height);
+                        chartReal.DrawToBitmap(bmpReal, new System.Drawing.Rectangle(0, 0, chartReal.Width, chartReal.Height));
+                        string imgPathReal = System.IO.Path.GetTempFileName();
+                        bmpReal.Save(imgPathReal, System.Drawing.Imaging.ImageFormat.Png);
+
+                        // Cria tabela com 2 colunas para colocar os gráficos lado a lado
+                        PdfPTable tabelaGraficos = new PdfPTable(2);
+                        tabelaGraficos.WidthPercentage = 100;
+                        tabelaGraficos.DefaultCell.Border = PdfPCell.NO_BORDER;
+                        tabelaGraficos.SetWidths(new float[] { 50f, 50f });
+
+                        // Imagem gráfico Ideal
+                        iTextSharp.text.Image imgIdeal = iTextSharp.text.Image.GetInstance(imgPathIdeal);
+                        imgIdeal.ScaleToFit((doc.PageSize.Width - doc.LeftMargin - doc.RightMargin) / 2 - 10, doc.PageSize.Height / 2);
+                        imgIdeal.Alignment = Element.ALIGN_CENTER;
+
+                        PdfPCell cellIdeal = new PdfPCell(imgIdeal);
+                        cellIdeal.Border = PdfPCell.NO_BORDER;
+                        cellIdeal.HorizontalAlignment = Element.ALIGN_CENTER;
+                        tabelaGraficos.AddCell(cellIdeal);
+
+                        // Imagem gráfico Real
+                        iTextSharp.text.Image imgReal = iTextSharp.text.Image.GetInstance(imgPathReal);
+                        imgReal.ScaleToFit((doc.PageSize.Width - doc.LeftMargin - doc.RightMargin) / 2 - 10, doc.PageSize.Height / 2);
+                        imgReal.Alignment = Element.ALIGN_CENTER;
+
+                        PdfPCell cellReal = new PdfPCell(imgReal);
+                        cellReal.Border = PdfPCell.NO_BORDER;
+                        cellReal.HorizontalAlignment = Element.ALIGN_CENTER;
+                        tabelaGraficos.AddCell(cellReal);
+
+                        // Adiciona a tabela com gráficos ao documento
+                        doc.Add(tabelaGraficos);
+
+                        // Fecha documento
+                        doc.Close();
+
+                        // Apaga arquivos temporários
+                        if (System.IO.File.Exists(imgPathIdeal)) System.IO.File.Delete(imgPathIdeal);
+                        if (System.IO.File.Exists(imgPathReal)) System.IO.File.Delete(imgPathReal);
+
+                        MessageBox.Show("PDF gerado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro ao gerar PDF: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
+        }
+
     }
 }
