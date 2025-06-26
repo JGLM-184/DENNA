@@ -148,6 +148,9 @@ namespace FormCont
             curva = null;
         }
 
+        private void bt_nt_entrada_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }

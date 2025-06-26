@@ -34,6 +34,7 @@
             this.lblUsuario = new System.Windows.Forms.Label();
             this.painelLateral = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.bt_deslogar = new System.Windows.Forms.PictureBox();
             this.kryptonPictureBox1 = new Krypton.Toolkit.KryptonPictureBox();
             this.btCurvaABC = new System.Windows.Forms.Button();
@@ -45,7 +46,6 @@
             this.bt_relEntradaSaida = new System.Windows.Forms.Button();
             this.bt_nt_entrada = new System.Windows.Forms.Button();
             this.bt_cadastro_merc = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.painelLateral.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bt_deslogar)).BeginInit();
@@ -120,6 +120,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 49);
             this.panel1.TabIndex = 13;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(74, 15);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(60, 18);
+            this.label1.TabIndex = 29;
+            this.label1.Text = "Logout";
             // 
             // bt_deslogar
             // 
@@ -265,6 +276,7 @@
             this.bt_nt_entrada.Text = "      Registrar entrada";
             this.bt_nt_entrada.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bt_nt_entrada.UseVisualStyleBackColor = false;
+            this.bt_nt_entrada.Click += new System.EventHandler(this.bt_nt_entrada_Click);
             // 
             // bt_cadastro_merc
             // 
@@ -285,17 +297,6 @@
             this.bt_cadastro_merc.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bt_cadastro_merc.UseVisualStyleBackColor = false;
             this.bt_cadastro_merc.Click += new System.EventHandler(this.bt_cadastro_merc_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(74, 15);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 18);
-            this.label1.TabIndex = 29;
-            this.label1.Text = "Logout";
             // 
             // Container
             // 
