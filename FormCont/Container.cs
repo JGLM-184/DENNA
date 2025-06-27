@@ -16,10 +16,12 @@ namespace FormCont
         ControleEstoque controle_estoque;
         CadastroMerc cadastro_merc;
         RelatoriosES relatorios;
-        
+        CurvaABC curva;
+
+
 
         //altera a cor de fundo do formulário container/menu para a cor branca
-        public Container()
+        public Container(string nomeUsuario)
         {
             InitializeComponent();
             foreach (Control control in this.Controls)
@@ -30,6 +32,9 @@ namespace FormCont
                     break;
                 }
             }
+
+            //Definindo o nome do usuário
+            lblUsuario.Text = $"Olá, {nomeUsuario}!";   
         }
 
         //inicializar Cadastro de Mercadorias
@@ -117,10 +122,53 @@ namespace FormCont
 
         private void bt_deslogar_Click_1(object sender, EventArgs e)
         {
+            var confirmar = MessageBox.Show("Deseja realmente sair?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (confirmar == DialogResult.Yes)
+            {
+                DeslogarEFechar();
+            }
+        }
+
+        private void DeslogarEFechar()
+        {
+            Sessao.Limpar();
+            this.Close();
 
         }
 
         private void bt_configuracoes_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btCurvaABC_Click(object sender, EventArgs e)
+        {
+            if (curva == null)
+            {
+                curva = new CurvaABC();
+                curva.FormClosed += Curva_FormClosed;
+                curva.MdiParent = this;
+                curva.Dock = DockStyle.Fill;
+                curva.Show();
+            }
+            else
+            {
+                curva.Activate();
+            }
+        }
+
+        private void Curva_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            curva = null;
+        }
+
+        private void kryptonPictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblUsuario_Click(object sender, EventArgs e)
         {
 
         }

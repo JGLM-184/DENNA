@@ -17,9 +17,9 @@ namespace FormCont
         //Atributos
         private int quantidade, itens_caixa, estoque_minimo, estoque_maximo;
 
-        private float volumes, peso_liquido, peso_bruto, largura, altura, profundidade;
+        private float volumes, peso_liquido, peso_bruto, largura, altura, profundidade, preco_venda;
 
-        private string codigo, formato, condicao, tipo, situacao, preco_venda, marca, producao,
+        private string codigo, nome, formato, condicao, tipo, situacao, marca, producao,
             data_validade, frete_gratis, unidade_medida, variacao_atributo, variacao_opcao, gtin,
             departamento, crossdocking, localizacao;
 
@@ -90,6 +90,12 @@ namespace FormCont
             set { codigo = value; }
         }
 
+        public string Nome
+        {
+            get { return nome; }
+            set { nome = value; }
+        }
+
         public string Formato
         {
             get { return formato; }
@@ -114,7 +120,7 @@ namespace FormCont
             set { situacao = value; }
         }
 
-        public string Preco_Venda
+        public float Preco_Venda
         {
             get { return preco_venda; }
             set { preco_venda = value; }
@@ -196,12 +202,12 @@ namespace FormCont
                     MysqlConexaoBanco.Open();
 
                     string insert = @"INSERT INTO mercadorias 
-                            (Quantidade, Itens_caixa, estoque_minimo, estoque_maximo, Volumes, Peso_liquido, Peso_bruto,
+                            (Quantidade, Nome, Itens_caixa, estoque_minimo, estoque_maximo, Volumes, Peso_liquido, Peso_bruto,
                             Largura, Altura, Profundidade, Preco_venda, codigo, Formato, Condicao, Tipo, Situacao, Marca,
                             Producao, Data_validade, Frete_gratis, Unidade_Medida, Variacao_Atributo, Variacao_Opcao, GTIN, 
                             Departamento, Crossdocking, Localizacao) 
                             VALUES 
-                            (@Quantidade, @Itens_Caixa, @Estoque_Minimo, @Estoque_Maximo, @Volumes, @Peso_Liquido, 
+                            (@Quantidade, @Nome, @Itens_Caixa, @Estoque_Minimo, @Estoque_Maximo, @Volumes, @Peso_Liquido, 
                             @Peso_Bruto, @Largura, @Altura, @Profundidade, @Preco_Venda, @Codigo, @Formato, @Condicao, 
                             @Tipo, @Situacao, @Marca, @Producao, @Data_Validade, @Frete_Gratis, @Unidade_Medida, 
                             @Variacao_Atributo, @Variacao_Opcao, @GTIN, @Departamento, @Crossdocking, @Localizacao)";
@@ -209,6 +215,7 @@ namespace FormCont
                     using (MySqlCommand comandoSql = new MySqlCommand(insert, MysqlConexaoBanco))
                     {
                         comandoSql.Parameters.AddWithValue("@Quantidade", Quantidade);
+                        comandoSql.Parameters.AddWithValue("@Nome", Nome);
                         comandoSql.Parameters.AddWithValue("@Itens_Caixa", Itens_Caixa);
                         comandoSql.Parameters.AddWithValue("@Estoque_Minimo", Estoque_Minimo);
                         comandoSql.Parameters.AddWithValue("@Estoque_Maximo", Estoque_Maximo);
@@ -260,6 +267,7 @@ namespace FormCont
 
                     string select = @"SELECT 
                                             codigo AS 'Código',
+                                            Nome AS 'Nome',
                                             Tipo AS 'Tipo',
                                             Quantidade AS 'Quantidade',
                                             Condicao AS 'Condição',
@@ -305,7 +313,7 @@ namespace FormCont
             }
         }
 
-        public DataTable listarMercadorias()
+        public DataTable listarMercadorias()    
         {
             try
             {
@@ -315,6 +323,7 @@ namespace FormCont
 
                     string select = @"SELECT 
                                             codigo AS 'Código',
+                                            Nome AS 'Nome',
                                             Tipo AS 'Tipo',
                                             Quantidade AS 'Quantidade',
                                             Condicao AS 'Condição',
@@ -370,6 +379,7 @@ namespace FormCont
 
                     string update = @"UPDATE mercadorias SET 
                 Quantidade = @Quantidade,
+                Nome = @Nome,
                 Formato = @Formato,
                 Condicao = @Condicao,
                 Tipo = @Tipo,
@@ -400,6 +410,7 @@ namespace FormCont
                     using (MySqlCommand cmd = new MySqlCommand(update, conn))
                     {
                         cmd.Parameters.AddWithValue("@Codigo", Codigo);
+                        cmd.Parameters.AddWithValue("@Nome", Nome);
                         cmd.Parameters.AddWithValue("@Quantidade", Quantidade);
                         cmd.Parameters.AddWithValue("@Formato", Formato);
                         cmd.Parameters.AddWithValue("@Condicao", Condicao);
@@ -473,14 +484,19 @@ namespace FormCont
                 {
                     MySqlConexaoBanco.Open();
 
-                    string select = @"SELECT
-                                    codigo_mercadoria as 'Código',
-                                    tipo_movimento as 'Movimento', 
-                                    quantidade as 'Quantidade',
-                                    preco_unitario_movimento as 'Preço unitário',
-                                    data_hora_movimento as 'Data e Hora',
-                                    observacoes as 'Observações'
-                                    FROM movimentos_estoque";      
+                    string select = @"
+                                    SELECT
+                                        me.codigo_mercadoria AS 'Código',
+                                        m.Nome AS 'Nome da Mercadoria',
+                                        me.tipo_movimento AS 'Movimento',
+                                        me.quantidade AS 'Quantidade',
+                                        me.preco_unitario_movimento AS 'Preço unitário',
+                                        me.data_hora_movimento AS 'Data e Hora',
+                                        me.observacoes AS 'Observações'
+                                    FROM movimentos_estoque me
+                                    JOIN mercadorias m ON m.codigo = me.codigo_mercadoria
+                                    ORDER BY me.data_hora_movimento DESC";
+
                     MySqlCommand comandoSql = new MySqlCommand(select, MySqlConexaoBanco);
 
                     MySqlDataAdapter dataAdapter = new MySqlDataAdapter(comandoSql);
@@ -496,5 +512,98 @@ namespace FormCont
                 return null;
             }
         }
+
+
+        //Método para exibir o relatório de movimentação (entrada e saída) das mercadorias
+        //através de código na barra de busca
+        public DataTable relatorioPorCodigo(string codigoMercadoria)
+        {
+            try
+            {
+                using (MySqlConnection MySqlConexaoBanco = new MySqlConnection(ConexaoBanco.conexaoBd))
+                {
+                    MySqlConexaoBanco.Open();
+
+                    string select = @"SELECT
+                                    me.codigo_mercadoria AS 'Código',
+                                    m.Nome AS 'Nome',
+                                    me.tipo_movimento AS 'Movimento',
+                                    me.quantidade AS 'Quantidade',
+                                    me.preco_unitario_movimento AS 'Preço unitário',
+                                    me.data_hora_movimento AS 'Data e Hora',
+                                    me.observacoes AS 'Observações'
+                                FROM movimentos_estoque me
+                                JOIN mercadorias m ON me.codigo_mercadoria = m.codigo
+                                WHERE (@codigo = '' OR me.codigo_mercadoria = @codigo)";
+
+                    MySqlCommand comandoSql = new MySqlCommand(select, MySqlConexaoBanco);
+                    comandoSql.Parameters.AddWithValue("@codigo", codigoMercadoria);
+
+                    MySqlDataAdapter dataAdapter = new MySqlDataAdapter(comandoSql);
+                    DataTable dataTable = new DataTable();
+                    dataAdapter.Fill(dataTable);
+
+                    return dataTable;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro no banco de dados: " + ex.Message);
+                return null;
+            }
+        }
+
+
+        public DataTable relatorioPorPeriodo(string codigo, DateTime dataInicio, DateTime dataFim)
+        {
+            try
+            {
+                using (MySqlConnection conn = new MySqlConnection(ConexaoBanco.conexaoBd))
+                {
+                    conn.Open();
+
+                    string sql = @"
+                SELECT 
+                    me.codigo_mercadoria AS 'Código',
+                    m.Nome AS 'Nome',
+                    me.tipo_movimento AS 'Movimento', 
+                    me.quantidade AS 'Quantidade',
+                    me.preco_unitario_movimento AS 'Preço unitário',
+                    me.data_hora_movimento AS 'Data e Hora',
+                    me.observacoes AS 'Observações'
+                FROM movimentos_estoque me
+                JOIN mercadorias m ON me.codigo_mercadoria = m.codigo
+                WHERE me.data_hora_movimento BETWEEN @DataInicio AND @DataFim";
+
+                    if (!string.IsNullOrEmpty(codigo))
+                    {
+                        sql += " AND me.codigo_mercadoria = @Codigo ";
+                    }
+
+                    MySqlCommand cmd = new MySqlCommand(sql, conn);
+                    cmd.Parameters.AddWithValue("@DataInicio", dataInicio);
+                    cmd.Parameters.AddWithValue("@DataFim", dataFim);
+
+                    if (!string.IsNullOrEmpty(codigo))
+                    {
+                        cmd.Parameters.AddWithValue("@Codigo", codigo);
+                    }
+
+                    MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    adapter.Fill(dt);
+
+                    return dt;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao gerar relatório por período: " + ex.Message);
+                return null;
+            }
+        }
+
+
+
     }
 }

@@ -35,65 +35,67 @@
             this.kryptonPanel3 = new Krypton.Toolkit.KryptonPanel();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
-            this.btsalvarMercadoria = new Krypton.Toolkit.KryptonButton();
+            this.btSalvarMercadoria = new Krypton.Toolkit.KryptonButton();
             this.label17 = new System.Windows.Forms.Label();
-            this.txtcrossdocking = new System.Windows.Forms.TextBox();
-            this.txtdepartamento = new System.Windows.Forms.ComboBox();
+            this.txtCrossdocking = new System.Windows.Forms.TextBox();
+            this.txtDepartamento = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.txtGtinEan = new System.Windows.Forms.TextBox();
-            this.txtestoqueMaximo = new System.Windows.Forms.TextBox();
+            this.txtGtin = new System.Windows.Forms.TextBox();
+            this.txtEstoqueMaximo = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.txtlocalizacao = new System.Windows.Forms.TextBox();
+            this.txtLocalizacao = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.txtsituacao = new System.Windows.Forms.ComboBox();
+            this.txtSituacao = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.txtestoqueMinimo = new System.Windows.Forms.TextBox();
+            this.txtEstoqueMinimo = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.kryptonPanel2 = new Krypton.Toolkit.KryptonPanel();
+            this.label21 = new System.Windows.Forms.Label();
+            this.txtNome = new System.Windows.Forms.TextBox();
+            this.txtDataValidade = new System.Windows.Forms.MaskedTextBox();
+            this.txtVolume = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.txtvarOpcao = new System.Windows.Forms.TextBox();
+            this.txtVarOpcao = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
-            this.txtvarAtributo = new System.Windows.Forms.TextBox();
+            this.txtVarAtributo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
-            this.txtitensCaixa = new System.Windows.Forms.TextBox();
-            this.txtfretegratis = new System.Windows.Forms.ComboBox();
-            this.txtcondicao = new System.Windows.Forms.ComboBox();
+            this.txtItensCaixa = new System.Windows.Forms.TextBox();
+            this.txtFreteGratis = new System.Windows.Forms.ComboBox();
+            this.txtCondicao = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
-            this.txtproducao = new System.Windows.Forms.ComboBox();
             this.label24 = new System.Windows.Forms.Label();
-            this.txttipo = new System.Windows.Forms.TextBox();
+            this.txtTipo = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
-            this.txtunidade = new System.Windows.Forms.TextBox();
-            this.txtformato = new System.Windows.Forms.ComboBox();
+            this.txtQuantidade = new System.Windows.Forms.TextBox();
+            this.txtFormato = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtprecovenda = new System.Windows.Forms.TextBox();
+            this.txtPrecoVenda = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
-            this.txtunidadeMedida = new System.Windows.Forms.ComboBox();
-            this.txtlargura = new System.Windows.Forms.TextBox();
-            this.txtpesoBruto = new System.Windows.Forms.TextBox();
-            this.txtvolumes = new System.Windows.Forms.ComboBox();
-            this.txtaltura = new System.Windows.Forms.TextBox();
-            this.txtcodigo = new System.Windows.Forms.TextBox();
-            this.txtpesoLiquido = new System.Windows.Forms.TextBox();
+            this.txtUnidadeMedida = new System.Windows.Forms.ComboBox();
+            this.txtLargura = new System.Windows.Forms.TextBox();
+            this.txtPesoBruto = new System.Windows.Forms.TextBox();
+            this.txtAltura = new System.Windows.Forms.TextBox();
+            this.txtCodigo = new System.Windows.Forms.TextBox();
+            this.txtPesoLiquido = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
-            this.txtmarca = new System.Windows.Forms.TextBox();
+            this.txtMarca = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
-            this.txtdatavalidade = new System.Windows.Forms.TextBox();
             this.label32 = new System.Windows.Forms.Label();
-            this.txtprofundidade = new System.Windows.Forms.TextBox();
+            this.txtProfundidade = new System.Windows.Forms.TextBox();
+            this.txtProducao = new System.Windows.Forms.MaskedTextBox();
             this.kryptonPanel1 = new Krypton.Toolkit.KryptonPanel();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel3)).BeginInit();
@@ -143,7 +145,7 @@
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(20, 68);
-            this.panel1.TabIndex = 34;
+            this.panel1.TabIndex = 0;
             // 
             // panel2
             // 
@@ -155,26 +157,25 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1245, 788);
             this.panel2.TabIndex = 35;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // kryptonPanel3
             // 
             this.kryptonPanel3.Controls.Add(this.label19);
             this.kryptonPanel3.Controls.Add(this.label20);
-            this.kryptonPanel3.Controls.Add(this.btsalvarMercadoria);
+            this.kryptonPanel3.Controls.Add(this.btSalvarMercadoria);
             this.kryptonPanel3.Controls.Add(this.label17);
-            this.kryptonPanel3.Controls.Add(this.txtcrossdocking);
-            this.kryptonPanel3.Controls.Add(this.txtdepartamento);
+            this.kryptonPanel3.Controls.Add(this.txtCrossdocking);
+            this.kryptonPanel3.Controls.Add(this.txtDepartamento);
             this.kryptonPanel3.Controls.Add(this.label3);
             this.kryptonPanel3.Controls.Add(this.label11);
-            this.kryptonPanel3.Controls.Add(this.txtGtinEan);
-            this.kryptonPanel3.Controls.Add(this.txtestoqueMaximo);
+            this.kryptonPanel3.Controls.Add(this.txtGtin);
+            this.kryptonPanel3.Controls.Add(this.txtEstoqueMaximo);
             this.kryptonPanel3.Controls.Add(this.label9);
-            this.kryptonPanel3.Controls.Add(this.txtlocalizacao);
+            this.kryptonPanel3.Controls.Add(this.txtLocalizacao);
             this.kryptonPanel3.Controls.Add(this.label16);
-            this.kryptonPanel3.Controls.Add(this.txtsituacao);
+            this.kryptonPanel3.Controls.Add(this.txtSituacao);
             this.kryptonPanel3.Controls.Add(this.label12);
-            this.kryptonPanel3.Controls.Add(this.txtestoqueMinimo);
+            this.kryptonPanel3.Controls.Add(this.txtEstoqueMinimo);
             this.kryptonPanel3.Controls.Add(this.label10);
             this.kryptonPanel3.Dock = System.Windows.Forms.DockStyle.Right;
             this.kryptonPanel3.Location = new System.Drawing.Point(792, 92);
@@ -182,81 +183,81 @@
             this.kryptonPanel3.PaletteMode = Krypton.Toolkit.PaletteMode.Office2007White;
             this.kryptonPanel3.PanelBackStyle = Krypton.Toolkit.PaletteBackStyle.ButtonStandalone;
             this.kryptonPanel3.Size = new System.Drawing.Size(453, 696);
-            this.kryptonPanel3.TabIndex = 93;
+            this.kryptonPanel3.TabIndex = 0;
             // 
             // label19
             // 
             this.label19.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
             this.label19.Location = new System.Drawing.Point(19, 33);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(119, 18);
-            this.label19.TabIndex = 90;
+            this.label19.Size = new System.Drawing.Size(132, 18);
+            this.label19.TabIndex = 0;
             this.label19.Text = "IDENTIFICAÇÃO";
             // 
             // label20
             // 
             this.label20.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
             this.label20.Location = new System.Drawing.Point(19, 227);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(82, 18);
-            this.label20.TabIndex = 91;
+            this.label20.Size = new System.Drawing.Size(89, 18);
+            this.label20.TabIndex = 0;
             this.label20.Text = "ESTOQUE";
             // 
-            // btsalvarMercadoria
+            // btSalvarMercadoria
             // 
-            this.btsalvarMercadoria.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btsalvarMercadoria.Location = new System.Drawing.Point(279, 412);
-            this.btsalvarMercadoria.Name = "btsalvarMercadoria";
-            this.btsalvarMercadoria.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.btsalvarMercadoria.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.btsalvarMercadoria.OverrideDefault.Back.ColorAngle = 45F;
-            this.btsalvarMercadoria.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.btsalvarMercadoria.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.btsalvarMercadoria.OverrideDefault.Border.ColorAngle = 45F;
-            this.btsalvarMercadoria.OverrideDefault.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.btsalvarMercadoria.OverrideDefault.Border.Rounding = 20F;
-            this.btsalvarMercadoria.OverrideDefault.Border.Width = 1;
-            this.btsalvarMercadoria.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.btsalvarMercadoria.Size = new System.Drawing.Size(149, 43);
-            this.btsalvarMercadoria.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.btsalvarMercadoria.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.btsalvarMercadoria.StateCommon.Back.ColorAngle = 45F;
-            this.btsalvarMercadoria.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.btsalvarMercadoria.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.btsalvarMercadoria.StateCommon.Border.ColorAngle = 45F;
-            this.btsalvarMercadoria.StateCommon.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.btsalvarMercadoria.StateCommon.Border.Rounding = 20F;
-            this.btsalvarMercadoria.StateCommon.Border.Width = 1;
-            this.btsalvarMercadoria.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
-            this.btsalvarMercadoria.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
-            this.btsalvarMercadoria.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btsalvarMercadoria.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
-            this.btsalvarMercadoria.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
-            this.btsalvarMercadoria.StatePressed.Back.ColorAngle = 135F;
-            this.btsalvarMercadoria.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
-            this.btsalvarMercadoria.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
-            this.btsalvarMercadoria.StatePressed.Border.ColorAngle = 135F;
-            this.btsalvarMercadoria.StatePressed.Border.Rounding = 20F;
-            this.btsalvarMercadoria.StatePressed.Border.Width = 1;
-            this.btsalvarMercadoria.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.btsalvarMercadoria.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.btsalvarMercadoria.StateTracking.Back.ColorAngle = 45F;
-            this.btsalvarMercadoria.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
-            this.btsalvarMercadoria.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
-            this.btsalvarMercadoria.StateTracking.Border.ColorAngle = 45F;
-            this.btsalvarMercadoria.StateTracking.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.btsalvarMercadoria.StateTracking.Border.Rounding = 20F;
-            this.btsalvarMercadoria.StateTracking.Border.Width = 1;
-            this.btsalvarMercadoria.TabIndex = 89;
-            this.btsalvarMercadoria.Values.DropDownArrowColor = System.Drawing.Color.Empty;
-            this.btsalvarMercadoria.Values.Text = "Salvar";
-            this.btsalvarMercadoria.Click += new System.EventHandler(this.btsalvarMercadoria_Click_1);
+            this.btSalvarMercadoria.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btSalvarMercadoria.Location = new System.Drawing.Point(279, 412);
+            this.btSalvarMercadoria.Name = "btSalvarMercadoria";
+            this.btSalvarMercadoria.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.btSalvarMercadoria.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.btSalvarMercadoria.OverrideDefault.Back.ColorAngle = 45F;
+            this.btSalvarMercadoria.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.btSalvarMercadoria.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.btSalvarMercadoria.OverrideDefault.Border.ColorAngle = 45F;
+            this.btSalvarMercadoria.OverrideDefault.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btSalvarMercadoria.OverrideDefault.Border.Rounding = 20F;
+            this.btSalvarMercadoria.OverrideDefault.Border.Width = 1;
+            this.btSalvarMercadoria.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            this.btSalvarMercadoria.Size = new System.Drawing.Size(149, 43);
+            this.btSalvarMercadoria.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.btSalvarMercadoria.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.btSalvarMercadoria.StateCommon.Back.ColorAngle = 45F;
+            this.btSalvarMercadoria.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.btSalvarMercadoria.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.btSalvarMercadoria.StateCommon.Border.ColorAngle = 45F;
+            this.btSalvarMercadoria.StateCommon.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btSalvarMercadoria.StateCommon.Border.Rounding = 20F;
+            this.btSalvarMercadoria.StateCommon.Border.Width = 1;
+            this.btSalvarMercadoria.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.btSalvarMercadoria.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.btSalvarMercadoria.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btSalvarMercadoria.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
+            this.btSalvarMercadoria.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            this.btSalvarMercadoria.StatePressed.Back.ColorAngle = 135F;
+            this.btSalvarMercadoria.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
+            this.btSalvarMercadoria.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            this.btSalvarMercadoria.StatePressed.Border.ColorAngle = 135F;
+            this.btSalvarMercadoria.StatePressed.Border.Rounding = 20F;
+            this.btSalvarMercadoria.StatePressed.Border.Width = 1;
+            this.btSalvarMercadoria.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.btSalvarMercadoria.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.btSalvarMercadoria.StateTracking.Back.ColorAngle = 45F;
+            this.btSalvarMercadoria.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.btSalvarMercadoria.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.btSalvarMercadoria.StateTracking.Border.ColorAngle = 45F;
+            this.btSalvarMercadoria.StateTracking.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btSalvarMercadoria.StateTracking.Border.Rounding = 20F;
+            this.btSalvarMercadoria.StateTracking.Border.Width = 1;
+            this.btSalvarMercadoria.TabIndex = 29;
+            this.btSalvarMercadoria.Values.DropDownArrowColor = System.Drawing.Color.Empty;
+            this.btSalvarMercadoria.Values.Text = "Salvar";
+            this.btSalvarMercadoria.Click += new System.EventHandler(this.btsalvarMercadoria_Click_1);
             // 
             // label17
             // 
@@ -267,34 +268,45 @@
             this.label17.Location = new System.Drawing.Point(234, 68);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(112, 20);
-            this.label17.TabIndex = 75;
+            this.label17.TabIndex = 0;
             this.label17.Text = "Departamento";
             // 
-            // txtcrossdocking
+            // txtCrossdocking
             // 
-            this.txtcrossdocking.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtcrossdocking.BackColor = System.Drawing.Color.White;
-            this.txtcrossdocking.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtcrossdocking.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(37)))), ((int)(((byte)(58)))));
-            this.txtcrossdocking.Location = new System.Drawing.Point(19, 349);
-            this.txtcrossdocking.Name = "txtcrossdocking";
-            this.txtcrossdocking.Size = new System.Drawing.Size(160, 26);
-            this.txtcrossdocking.TabIndex = 85;
+            this.txtCrossdocking.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtCrossdocking.BackColor = System.Drawing.Color.White;
+            this.txtCrossdocking.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCrossdocking.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(37)))), ((int)(((byte)(58)))));
+            this.txtCrossdocking.Location = new System.Drawing.Point(19, 349);
+            this.txtCrossdocking.Name = "txtCrossdocking";
+            this.txtCrossdocking.Size = new System.Drawing.Size(160, 26);
+            this.txtCrossdocking.TabIndex = 25;
             // 
-            // txtdepartamento
+            // txtDepartamento
             // 
-            this.txtdepartamento.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtdepartamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtdepartamento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(37)))), ((int)(((byte)(58)))));
-            this.txtdepartamento.FormattingEnabled = true;
-            this.txtdepartamento.Items.AddRange(new object[] {
-            "a",
-            "b",
-            "c"});
-            this.txtdepartamento.Location = new System.Drawing.Point(234, 89);
-            this.txtdepartamento.Name = "txtdepartamento";
-            this.txtdepartamento.Size = new System.Drawing.Size(195, 28);
-            this.txtdepartamento.TabIndex = 88;
+            this.txtDepartamento.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtDepartamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDepartamento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(37)))), ((int)(((byte)(58)))));
+            this.txtDepartamento.FormattingEnabled = true;
+            this.txtDepartamento.Items.AddRange(new object[] {
+            "Rações",
+            "Petiscos",
+            "Higiente/Limpeza",
+            "Brinquedos",
+            "Acessórios",
+            "Filhotes",
+            "Medicamentos",
+            "Cuidados/Saúde",
+            "Transporte/Passeio",
+            "Aquarismo",
+            "Aves",
+            "Roedores",
+            "Serviços",
+            "Produtos Naturais"});
+            this.txtDepartamento.Location = new System.Drawing.Point(234, 89);
+            this.txtDepartamento.Name = "txtDepartamento";
+            this.txtDepartamento.Size = new System.Drawing.Size(195, 28);
+            this.txtDepartamento.TabIndex = 23;
             // 
             // label3
             // 
@@ -305,7 +317,7 @@
             this.label3.Location = new System.Drawing.Point(18, 69);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(84, 20);
-            this.label3.TabIndex = 77;
+            this.label3.TabIndex = 0;
             this.label3.Text = "GTIN/EAN";
             // 
             // label11
@@ -317,30 +329,30 @@
             this.label11.Location = new System.Drawing.Point(344, 260);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(63, 20);
-            this.label11.TabIndex = 79;
+            this.label11.TabIndex = 0;
             this.label11.Text = "Máximo";
             // 
-            // txtGtinEan
+            // txtGtin
             // 
-            this.txtGtinEan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtGtinEan.BackColor = System.Drawing.Color.White;
-            this.txtGtinEan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGtinEan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(37)))), ((int)(((byte)(58)))));
-            this.txtGtinEan.Location = new System.Drawing.Point(19, 90);
-            this.txtGtinEan.Name = "txtGtinEan";
-            this.txtGtinEan.Size = new System.Drawing.Size(177, 26);
-            this.txtGtinEan.TabIndex = 87;
+            this.txtGtin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtGtin.BackColor = System.Drawing.Color.White;
+            this.txtGtin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGtin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(37)))), ((int)(((byte)(58)))));
+            this.txtGtin.Location = new System.Drawing.Point(19, 90);
+            this.txtGtin.Name = "txtGtin";
+            this.txtGtin.Size = new System.Drawing.Size(177, 26);
+            this.txtGtin.TabIndex = 22;
             // 
-            // txtestoqueMaximo
+            // txtEstoqueMaximo
             // 
-            this.txtestoqueMaximo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtestoqueMaximo.BackColor = System.Drawing.Color.White;
-            this.txtestoqueMaximo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtestoqueMaximo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(37)))), ((int)(((byte)(58)))));
-            this.txtestoqueMaximo.Location = new System.Drawing.Point(344, 284);
-            this.txtestoqueMaximo.Name = "txtestoqueMaximo";
-            this.txtestoqueMaximo.Size = new System.Drawing.Size(85, 26);
-            this.txtestoqueMaximo.TabIndex = 84;
+            this.txtEstoqueMaximo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtEstoqueMaximo.BackColor = System.Drawing.Color.White;
+            this.txtEstoqueMaximo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEstoqueMaximo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(37)))), ((int)(((byte)(58)))));
+            this.txtEstoqueMaximo.Location = new System.Drawing.Point(344, 284);
+            this.txtEstoqueMaximo.Name = "txtEstoqueMaximo";
+            this.txtEstoqueMaximo.Size = new System.Drawing.Size(85, 26);
+            this.txtEstoqueMaximo.TabIndex = 27;
             // 
             // label9
             // 
@@ -351,19 +363,19 @@
             this.label9.Location = new System.Drawing.Point(234, 325);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(93, 20);
-            this.label9.TabIndex = 81;
+            this.label9.TabIndex = 0;
             this.label9.Text = "Localização";
             // 
-            // txtlocalizacao
+            // txtLocalizacao
             // 
-            this.txtlocalizacao.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtlocalizacao.BackColor = System.Drawing.Color.White;
-            this.txtlocalizacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtlocalizacao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(37)))), ((int)(((byte)(58)))));
-            this.txtlocalizacao.Location = new System.Drawing.Point(234, 349);
-            this.txtlocalizacao.Name = "txtlocalizacao";
-            this.txtlocalizacao.Size = new System.Drawing.Size(195, 26);
-            this.txtlocalizacao.TabIndex = 86;
+            this.txtLocalizacao.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtLocalizacao.BackColor = System.Drawing.Color.White;
+            this.txtLocalizacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLocalizacao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(37)))), ((int)(((byte)(58)))));
+            this.txtLocalizacao.Location = new System.Drawing.Point(234, 349);
+            this.txtLocalizacao.Name = "txtLocalizacao";
+            this.txtLocalizacao.Size = new System.Drawing.Size(195, 26);
+            this.txtLocalizacao.TabIndex = 28;
             // 
             // label16
             // 
@@ -374,22 +386,22 @@
             this.label16.Location = new System.Drawing.Point(19, 260);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(72, 20);
-            this.label16.TabIndex = 80;
+            this.label16.TabIndex = 0;
             this.label16.Text = "Situação";
             // 
-            // txtsituacao
+            // txtSituacao
             // 
-            this.txtsituacao.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtsituacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtsituacao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(37)))), ((int)(((byte)(58)))));
-            this.txtsituacao.FormattingEnabled = true;
-            this.txtsituacao.Items.AddRange(new object[] {
-            "Ativado",
-            "Não ativado"});
-            this.txtsituacao.Location = new System.Drawing.Point(19, 283);
-            this.txtsituacao.Name = "txtsituacao";
-            this.txtsituacao.Size = new System.Drawing.Size(158, 28);
-            this.txtsituacao.TabIndex = 82;
+            this.txtSituacao.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSituacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSituacao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(37)))), ((int)(((byte)(58)))));
+            this.txtSituacao.FormattingEnabled = true;
+            this.txtSituacao.Items.AddRange(new object[] {
+            "Ativo",
+            "Inativo"});
+            this.txtSituacao.Location = new System.Drawing.Point(19, 283);
+            this.txtSituacao.Name = "txtSituacao";
+            this.txtSituacao.Size = new System.Drawing.Size(158, 28);
+            this.txtSituacao.TabIndex = 24;
             // 
             // label12
             // 
@@ -400,19 +412,19 @@
             this.label12.Location = new System.Drawing.Point(234, 260);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(59, 20);
-            this.label12.TabIndex = 78;
+            this.label12.TabIndex = 0;
             this.label12.Text = "Mínimo";
             // 
-            // txtestoqueMinimo
+            // txtEstoqueMinimo
             // 
-            this.txtestoqueMinimo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtestoqueMinimo.BackColor = System.Drawing.Color.White;
-            this.txtestoqueMinimo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtestoqueMinimo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(37)))), ((int)(((byte)(58)))));
-            this.txtestoqueMinimo.Location = new System.Drawing.Point(234, 284);
-            this.txtestoqueMinimo.Name = "txtestoqueMinimo";
-            this.txtestoqueMinimo.Size = new System.Drawing.Size(85, 26);
-            this.txtestoqueMinimo.TabIndex = 83;
+            this.txtEstoqueMinimo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtEstoqueMinimo.BackColor = System.Drawing.Color.White;
+            this.txtEstoqueMinimo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEstoqueMinimo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(37)))), ((int)(((byte)(58)))));
+            this.txtEstoqueMinimo.Location = new System.Drawing.Point(234, 284);
+            this.txtEstoqueMinimo.Name = "txtEstoqueMinimo";
+            this.txtEstoqueMinimo.Size = new System.Drawing.Size(85, 26);
+            this.txtEstoqueMinimo.TabIndex = 26;
             // 
             // label10
             // 
@@ -423,82 +435,127 @@
             this.label10.Location = new System.Drawing.Point(19, 325);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(105, 20);
-            this.label10.TabIndex = 76;
+            this.label10.TabIndex = 0;
             this.label10.Text = "Crossdocking";
             // 
             // kryptonPanel2
             // 
+            this.kryptonPanel2.Controls.Add(this.label21);
+            this.kryptonPanel2.Controls.Add(this.txtNome);
+            this.kryptonPanel2.Controls.Add(this.txtDataValidade);
+            this.kryptonPanel2.Controls.Add(this.txtVolume);
             this.kryptonPanel2.Controls.Add(this.label18);
-            this.kryptonPanel2.Controls.Add(this.txtvarOpcao);
+            this.kryptonPanel2.Controls.Add(this.txtVarOpcao);
             this.kryptonPanel2.Controls.Add(this.label14);
             this.kryptonPanel2.Controls.Add(this.label13);
             this.kryptonPanel2.Controls.Add(this.label34);
-            this.kryptonPanel2.Controls.Add(this.txtvarAtributo);
+            this.kryptonPanel2.Controls.Add(this.txtVarAtributo);
             this.kryptonPanel2.Controls.Add(this.label2);
             this.kryptonPanel2.Controls.Add(this.label35);
             this.kryptonPanel2.Controls.Add(this.label33);
             this.kryptonPanel2.Controls.Add(this.label15);
             this.kryptonPanel2.Controls.Add(this.label30);
-            this.kryptonPanel2.Controls.Add(this.txtitensCaixa);
-            this.kryptonPanel2.Controls.Add(this.txtfretegratis);
-            this.kryptonPanel2.Controls.Add(this.txtcondicao);
+            this.kryptonPanel2.Controls.Add(this.txtItensCaixa);
+            this.kryptonPanel2.Controls.Add(this.txtFreteGratis);
+            this.kryptonPanel2.Controls.Add(this.txtCondicao);
             this.kryptonPanel2.Controls.Add(this.label7);
             this.kryptonPanel2.Controls.Add(this.label28);
             this.kryptonPanel2.Controls.Add(this.label27);
-            this.kryptonPanel2.Controls.Add(this.txtproducao);
             this.kryptonPanel2.Controls.Add(this.label24);
-            this.kryptonPanel2.Controls.Add(this.txttipo);
+            this.kryptonPanel2.Controls.Add(this.txtTipo);
             this.kryptonPanel2.Controls.Add(this.label25);
-            this.kryptonPanel2.Controls.Add(this.txtunidade);
-            this.kryptonPanel2.Controls.Add(this.txtformato);
+            this.kryptonPanel2.Controls.Add(this.txtQuantidade);
+            this.kryptonPanel2.Controls.Add(this.txtFormato);
             this.kryptonPanel2.Controls.Add(this.label6);
-            this.kryptonPanel2.Controls.Add(this.txtprecovenda);
+            this.kryptonPanel2.Controls.Add(this.txtPrecoVenda);
             this.kryptonPanel2.Controls.Add(this.label4);
             this.kryptonPanel2.Controls.Add(this.label29);
-            this.kryptonPanel2.Controls.Add(this.txtunidadeMedida);
-            this.kryptonPanel2.Controls.Add(this.txtlargura);
-            this.kryptonPanel2.Controls.Add(this.txtpesoBruto);
-            this.kryptonPanel2.Controls.Add(this.txtvolumes);
-            this.kryptonPanel2.Controls.Add(this.txtaltura);
-            this.kryptonPanel2.Controls.Add(this.txtcodigo);
-            this.kryptonPanel2.Controls.Add(this.txtpesoLiquido);
+            this.kryptonPanel2.Controls.Add(this.txtUnidadeMedida);
+            this.kryptonPanel2.Controls.Add(this.txtLargura);
+            this.kryptonPanel2.Controls.Add(this.txtPesoBruto);
+            this.kryptonPanel2.Controls.Add(this.txtAltura);
+            this.kryptonPanel2.Controls.Add(this.txtCodigo);
+            this.kryptonPanel2.Controls.Add(this.txtPesoLiquido);
             this.kryptonPanel2.Controls.Add(this.label5);
             this.kryptonPanel2.Controls.Add(this.label31);
             this.kryptonPanel2.Controls.Add(this.label23);
-            this.kryptonPanel2.Controls.Add(this.txtmarca);
+            this.kryptonPanel2.Controls.Add(this.txtMarca);
             this.kryptonPanel2.Controls.Add(this.label8);
             this.kryptonPanel2.Controls.Add(this.label36);
-            this.kryptonPanel2.Controls.Add(this.txtdatavalidade);
             this.kryptonPanel2.Controls.Add(this.label32);
-            this.kryptonPanel2.Controls.Add(this.txtprofundidade);
+            this.kryptonPanel2.Controls.Add(this.txtProfundidade);
+            this.kryptonPanel2.Controls.Add(this.txtProducao);
             this.kryptonPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.kryptonPanel2.Location = new System.Drawing.Point(0, 92);
             this.kryptonPanel2.Name = "kryptonPanel2";
             this.kryptonPanel2.PaletteMode = Krypton.Toolkit.PaletteMode.Office2007White;
             this.kryptonPanel2.PanelBackStyle = Krypton.Toolkit.PaletteBackStyle.HeaderPrimary;
             this.kryptonPanel2.Size = new System.Drawing.Size(1245, 696);
-            this.kryptonPanel2.TabIndex = 92;
+            this.kryptonPanel2.TabIndex = 0;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(37)))), ((int)(((byte)(58)))));
+            this.label21.Location = new System.Drawing.Point(187, 66);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(49, 18);
+            this.label21.TabIndex = 21;
+            this.label21.Text = "Nome";
+            // 
+            // txtNome
+            // 
+            this.txtNome.BackColor = System.Drawing.Color.White;
+            this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(37)))), ((int)(((byte)(58)))));
+            this.txtNome.Location = new System.Drawing.Point(187, 89);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(483, 26);
+            this.txtNome.TabIndex = 2;
+            // 
+            // txtDataValidade
+            // 
+            this.txtDataValidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtDataValidade.Location = new System.Drawing.Point(505, 284);
+            this.txtDataValidade.Mask = "00/00/0000";
+            this.txtDataValidade.Name = "txtDataValidade";
+            this.txtDataValidade.Size = new System.Drawing.Size(168, 26);
+            this.txtDataValidade.TabIndex = 10;
+            this.txtDataValidade.ValidatingType = typeof(System.DateTime);
+            // 
+            // txtVolume
+            // 
+            this.txtVolume.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtVolume.BackColor = System.Drawing.Color.White;
+            this.txtVolume.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVolume.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(37)))), ((int)(((byte)(58)))));
+            this.txtVolume.Location = new System.Drawing.Point(130, 349);
+            this.txtVolume.Name = "txtVolume";
+            this.txtVolume.Size = new System.Drawing.Size(75, 26);
+            this.txtVolume.TabIndex = 12;
             // 
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
             this.label18.Location = new System.Drawing.Point(34, 488);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(81, 18);
-            this.label18.TabIndex = 72;
+            this.label18.Size = new System.Drawing.Size(89, 18);
+            this.label18.TabIndex = 0;
             this.label18.Text = "VARIAÇÃO";
             // 
-            // txtvarOpcao
+            // txtVarOpcao
             // 
-            this.txtvarOpcao.BackColor = System.Drawing.Color.White;
-            this.txtvarOpcao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtvarOpcao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(37)))), ((int)(((byte)(58)))));
-            this.txtvarOpcao.Location = new System.Drawing.Point(266, 549);
-            this.txtvarOpcao.Name = "txtvarOpcao";
-            this.txtvarOpcao.Size = new System.Drawing.Size(168, 26);
-            this.txtvarOpcao.TabIndex = 20;
+            this.txtVarOpcao.BackColor = System.Drawing.Color.White;
+            this.txtVarOpcao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVarOpcao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(37)))), ((int)(((byte)(58)))));
+            this.txtVarOpcao.Location = new System.Drawing.Point(266, 549);
+            this.txtVarOpcao.Name = "txtVarOpcao";
+            this.txtVarOpcao.Size = new System.Drawing.Size(168, 26);
+            this.txtVarOpcao.TabIndex = 21;
             // 
             // label14
             // 
@@ -535,29 +592,28 @@
             this.label34.TabIndex = 0;
             this.label34.Text = "Data de validade";
             // 
-            // txtvarAtributo
+            // txtVarAtributo
             // 
-            this.txtvarAtributo.BackColor = System.Drawing.Color.White;
-            this.txtvarAtributo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtvarAtributo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(37)))), ((int)(((byte)(58)))));
-            this.txtvarAtributo.Location = new System.Drawing.Point(37, 549);
-            this.txtvarAtributo.Name = "txtvarAtributo";
-            this.txtvarAtributo.Size = new System.Drawing.Size(168, 26);
-            this.txtvarAtributo.TabIndex = 19;
+            this.txtVarAtributo.BackColor = System.Drawing.Color.White;
+            this.txtVarAtributo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVarAtributo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(37)))), ((int)(((byte)(58)))));
+            this.txtVarAtributo.Location = new System.Drawing.Point(37, 549);
+            this.txtVarAtributo.Name = "txtVarAtributo";
+            this.txtVarAtributo.Size = new System.Drawing.Size(168, 26);
+            this.txtVarAtributo.TabIndex = 20;
             // 
             // label2
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
             this.label2.Location = new System.Drawing.Point(34, 227);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(144, 18);
-            this.label2.TabIndex = 70;
+            this.label2.Size = new System.Drawing.Size(159, 18);
+            this.label2.TabIndex = 0;
             this.label2.Text = "CARACTERÍSTICAS";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label35
             // 
@@ -588,12 +644,12 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
             this.label15.Location = new System.Drawing.Point(37, 33);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(108, 18);
-            this.label15.TabIndex = 71;
+            this.label15.Size = new System.Drawing.Size(118, 18);
+            this.label15.TabIndex = 0;
             this.label15.Text = "MERCADORIA";
             // 
             // label30
@@ -609,46 +665,45 @@
             this.label30.TabIndex = 0;
             this.label30.Text = "Largura";
             // 
-            // txtitensCaixa
+            // txtItensCaixa
             // 
-            this.txtitensCaixa.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.txtItensCaixa.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtitensCaixa.BackColor = System.Drawing.Color.White;
-            this.txtitensCaixa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtitensCaixa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(37)))), ((int)(((byte)(58)))));
-            this.txtitensCaixa.Location = new System.Drawing.Point(37, 412);
-            this.txtitensCaixa.Name = "txtitensCaixa";
-            this.txtitensCaixa.Size = new System.Drawing.Size(168, 26);
-            this.txtitensCaixa.TabIndex = 17;
+            this.txtItensCaixa.BackColor = System.Drawing.Color.White;
+            this.txtItensCaixa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtItensCaixa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(37)))), ((int)(((byte)(58)))));
+            this.txtItensCaixa.Location = new System.Drawing.Point(37, 412);
+            this.txtItensCaixa.Name = "txtItensCaixa";
+            this.txtItensCaixa.Size = new System.Drawing.Size(168, 26);
+            this.txtItensCaixa.TabIndex = 18;
             // 
-            // txtfretegratis
+            // txtFreteGratis
             // 
-            this.txtfretegratis.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.txtFreteGratis.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtfretegratis.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtfretegratis.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(37)))), ((int)(((byte)(58)))));
-            this.txtfretegratis.FormattingEnabled = true;
-            this.txtfretegratis.Items.AddRange(new object[] {
+            this.txtFreteGratis.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFreteGratis.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(37)))), ((int)(((byte)(58)))));
+            this.txtFreteGratis.FormattingEnabled = true;
+            this.txtFreteGratis.Items.AddRange(new object[] {
             "Sim",
             "Não"});
-            this.txtfretegratis.Location = new System.Drawing.Point(37, 347);
-            this.txtfretegratis.Name = "txtfretegratis";
-            this.txtfretegratis.Size = new System.Drawing.Size(78, 28);
-            this.txtfretegratis.TabIndex = 10;
+            this.txtFreteGratis.Location = new System.Drawing.Point(37, 347);
+            this.txtFreteGratis.Name = "txtFreteGratis";
+            this.txtFreteGratis.Size = new System.Drawing.Size(78, 28);
+            this.txtFreteGratis.TabIndex = 11;
             // 
-            // txtcondicao
+            // txtCondicao
             // 
-            this.txtcondicao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtcondicao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(37)))), ((int)(((byte)(58)))));
-            this.txtcondicao.FormattingEnabled = true;
-            this.txtcondicao.Items.AddRange(new object[] {
-            "j",
-            "k",
-            "l"});
-            this.txtcondicao.Location = new System.Drawing.Point(37, 155);
-            this.txtcondicao.Name = "txtcondicao";
-            this.txtcondicao.Size = new System.Drawing.Size(168, 28);
-            this.txtcondicao.TabIndex = 4;
+            this.txtCondicao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCondicao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(37)))), ((int)(((byte)(58)))));
+            this.txtCondicao.FormattingEnabled = true;
+            this.txtCondicao.Items.AddRange(new object[] {
+            "Novo",
+            "Usado"});
+            this.txtCondicao.Location = new System.Drawing.Point(37, 155);
+            this.txtCondicao.Name = "txtCondicao";
+            this.txtCondicao.Size = new System.Drawing.Size(131, 28);
+            this.txtCondicao.TabIndex = 3;
             // 
             // label7
             // 
@@ -668,7 +723,7 @@
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label28.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(37)))), ((int)(((byte)(58)))));
-            this.label28.Location = new System.Drawing.Point(505, 134);
+            this.label28.Location = new System.Drawing.Point(539, 134);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(65, 18);
             this.label28.TabIndex = 0;
@@ -679,83 +734,74 @@
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(37)))), ((int)(((byte)(58)))));
-            this.label27.Location = new System.Drawing.Point(268, 69);
+            this.label27.Location = new System.Drawing.Point(187, 134);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(37, 18);
             this.label27.TabIndex = 0;
             this.label27.Text = "Tipo";
-            // 
-            // txtproducao
-            // 
-            this.txtproducao.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtproducao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtproducao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(37)))), ((int)(((byte)(58)))));
-            this.txtproducao.FormattingEnabled = true;
-            this.txtproducao.Items.AddRange(new object[] {
-            "d",
-            "e",
-            "f"});
-            this.txtproducao.Location = new System.Drawing.Point(271, 283);
-            this.txtproducao.Name = "txtproducao";
-            this.txtproducao.Size = new System.Drawing.Size(168, 28);
-            this.txtproducao.TabIndex = 8;
             // 
             // label24
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(37)))), ((int)(((byte)(58)))));
-            this.label24.Location = new System.Drawing.Point(505, 68);
+            this.label24.Location = new System.Drawing.Point(315, 134);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(83, 18);
             this.label24.TabIndex = 0;
             this.label24.Text = "Quantidade";
             // 
-            // txttipo
+            // txtTipo
             // 
-            this.txttipo.BackColor = System.Drawing.Color.White;
-            this.txttipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txttipo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(37)))), ((int)(((byte)(58)))));
-            this.txttipo.Location = new System.Drawing.Point(268, 90);
-            this.txttipo.Name = "txttipo";
-            this.txttipo.Size = new System.Drawing.Size(168, 26);
-            this.txttipo.TabIndex = 2;
+            this.txtTipo.BackColor = System.Drawing.Color.White;
+            this.txtTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTipo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(37)))), ((int)(((byte)(58)))));
+            this.txtTipo.Location = new System.Drawing.Point(187, 157);
+            this.txtTipo.Name = "txtTipo";
+            this.txtTipo.Size = new System.Drawing.Size(109, 26);
+            this.txtTipo.TabIndex = 4;
             // 
             // label25
             // 
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(37)))), ((int)(((byte)(58)))));
-            this.label25.Location = new System.Drawing.Point(271, 134);
+            this.label25.Location = new System.Drawing.Point(420, 134);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(111, 18);
             this.label25.TabIndex = 0;
             this.label25.Text = "Preço de venda";
             // 
-            // txtunidade
+            // txtQuantidade
             // 
-            this.txtunidade.BackColor = System.Drawing.Color.White;
-            this.txtunidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtunidade.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(37)))), ((int)(((byte)(58)))));
-            this.txtunidade.Location = new System.Drawing.Point(505, 90);
-            this.txtunidade.Name = "txtunidade";
-            this.txtunidade.Size = new System.Drawing.Size(168, 26);
-            this.txtunidade.TabIndex = 3;
+            this.txtQuantidade.BackColor = System.Drawing.Color.White;
+            this.txtQuantidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtQuantidade.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(37)))), ((int)(((byte)(58)))));
+            this.txtQuantidade.Location = new System.Drawing.Point(315, 155);
+            this.txtQuantidade.Name = "txtQuantidade";
+            this.txtQuantidade.Size = new System.Drawing.Size(96, 26);
+            this.txtQuantidade.TabIndex = 5;
             // 
-            // txtformato
+            // txtFormato
             // 
-            this.txtformato.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtformato.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(37)))), ((int)(((byte)(58)))));
-            this.txtformato.FormattingEnabled = true;
-            this.txtformato.Items.AddRange(new object[] {
-            "m",
-            "n",
-            "o"});
-            this.txtformato.Location = new System.Drawing.Point(505, 155);
-            this.txtformato.Name = "txtformato";
-            this.txtformato.Size = new System.Drawing.Size(168, 28);
-            this.txtformato.TabIndex = 6;
+            this.txtFormato.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFormato.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(37)))), ((int)(((byte)(58)))));
+            this.txtFormato.FormattingEnabled = true;
+            this.txtFormato.Items.AddRange(new object[] {
+            "Pacote",
+            "Frasco",
+            "Cartela",
+            "Unidade",
+            "Caixa",
+            "Blister",
+            "Tubo",
+            "Sachê",
+            "Seringa",
+            "Kit"});
+            this.txtFormato.Location = new System.Drawing.Point(539, 153);
+            this.txtFormato.Name = "txtFormato";
+            this.txtFormato.Size = new System.Drawing.Size(131, 28);
+            this.txtFormato.TabIndex = 7;
             // 
             // label6
             // 
@@ -764,21 +810,21 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(37)))), ((int)(((byte)(58)))));
-            this.label6.Location = new System.Drawing.Point(139, 326);
+            this.label6.Location = new System.Drawing.Point(130, 326);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(66, 18);
             this.label6.TabIndex = 0;
             this.label6.Text = "Volumes";
             // 
-            // txtprecovenda
+            // txtPrecoVenda
             // 
-            this.txtprecovenda.BackColor = System.Drawing.Color.White;
-            this.txtprecovenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtprecovenda.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(37)))), ((int)(((byte)(58)))));
-            this.txtprecovenda.Location = new System.Drawing.Point(271, 156);
-            this.txtprecovenda.Name = "txtprecovenda";
-            this.txtprecovenda.Size = new System.Drawing.Size(168, 26);
-            this.txtprecovenda.TabIndex = 5;
+            this.txtPrecoVenda.BackColor = System.Drawing.Color.White;
+            this.txtPrecoVenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPrecoVenda.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(37)))), ((int)(((byte)(58)))));
+            this.txtPrecoVenda.Location = new System.Drawing.Point(430, 155);
+            this.txtPrecoVenda.Name = "txtPrecoVenda";
+            this.txtPrecoVenda.Size = new System.Drawing.Size(90, 26);
+            this.txtPrecoVenda.TabIndex = 6;
             // 
             // label4
             // 
@@ -790,7 +836,7 @@
             this.label4.Location = new System.Drawing.Point(271, 391);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(134, 18);
-            this.label4.TabIndex = 69;
+            this.label4.TabIndex = 0;
             this.label4.Text = "Unidade de medida";
             // 
             // label29
@@ -804,96 +850,89 @@
             this.label29.TabIndex = 0;
             this.label29.Text = "Código ";
             // 
-            // txtunidadeMedida
+            // txtUnidadeMedida
             // 
-            this.txtunidadeMedida.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.txtUnidadeMedida.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtunidadeMedida.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtunidadeMedida.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(37)))), ((int)(((byte)(58)))));
-            this.txtunidadeMedida.FormattingEnabled = true;
-            this.txtunidadeMedida.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3"});
-            this.txtunidadeMedida.Location = new System.Drawing.Point(271, 412);
-            this.txtunidadeMedida.Name = "txtunidadeMedida";
-            this.txtunidadeMedida.Size = new System.Drawing.Size(168, 28);
-            this.txtunidadeMedida.TabIndex = 18;
+            this.txtUnidadeMedida.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUnidadeMedida.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(37)))), ((int)(((byte)(58)))));
+            this.txtUnidadeMedida.FormattingEnabled = true;
+            this.txtUnidadeMedida.Items.AddRange(new object[] {
+            "un",
+            "kg",
+            "g",
+            "mg",
+            "L",
+            "ml",
+            "pac",
+            "cx",
+            "m",
+            "cm",
+            "mm",
+            "pct"});
+            this.txtUnidadeMedida.Location = new System.Drawing.Point(271, 412);
+            this.txtUnidadeMedida.Name = "txtUnidadeMedida";
+            this.txtUnidadeMedida.Size = new System.Drawing.Size(168, 28);
+            this.txtUnidadeMedida.TabIndex = 19;
             // 
-            // txtlargura
+            // txtLargura
             // 
-            this.txtlargura.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.txtLargura.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtlargura.BackColor = System.Drawing.Color.White;
-            this.txtlargura.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtlargura.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(37)))), ((int)(((byte)(58)))));
-            this.txtlargura.Location = new System.Drawing.Point(441, 349);
-            this.txtlargura.Name = "txtlargura";
-            this.txtlargura.Size = new System.Drawing.Size(62, 26);
-            this.txtlargura.TabIndex = 14;
+            this.txtLargura.BackColor = System.Drawing.Color.White;
+            this.txtLargura.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLargura.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(37)))), ((int)(((byte)(58)))));
+            this.txtLargura.Location = new System.Drawing.Point(441, 349);
+            this.txtLargura.Name = "txtLargura";
+            this.txtLargura.Size = new System.Drawing.Size(62, 26);
+            this.txtLargura.TabIndex = 15;
             // 
-            // txtpesoBruto
+            // txtPesoBruto
             // 
-            this.txtpesoBruto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.txtPesoBruto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtpesoBruto.BackColor = System.Drawing.Color.White;
-            this.txtpesoBruto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtpesoBruto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(37)))), ((int)(((byte)(58)))));
-            this.txtpesoBruto.Location = new System.Drawing.Point(356, 349);
-            this.txtpesoBruto.Name = "txtpesoBruto";
-            this.txtpesoBruto.Size = new System.Drawing.Size(62, 26);
-            this.txtpesoBruto.TabIndex = 13;
+            this.txtPesoBruto.BackColor = System.Drawing.Color.White;
+            this.txtPesoBruto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPesoBruto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(37)))), ((int)(((byte)(58)))));
+            this.txtPesoBruto.Location = new System.Drawing.Point(356, 349);
+            this.txtPesoBruto.Name = "txtPesoBruto";
+            this.txtPesoBruto.Size = new System.Drawing.Size(62, 26);
+            this.txtPesoBruto.TabIndex = 14;
             // 
-            // txtvolumes
+            // txtAltura
             // 
-            this.txtvolumes.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.txtAltura.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtvolumes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtvolumes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(37)))), ((int)(((byte)(58)))));
-            this.txtvolumes.FormattingEnabled = true;
-            this.txtvolumes.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4"});
-            this.txtvolumes.Location = new System.Drawing.Point(130, 347);
-            this.txtvolumes.Name = "txtvolumes";
-            this.txtvolumes.Size = new System.Drawing.Size(75, 28);
-            this.txtvolumes.TabIndex = 11;
+            this.txtAltura.BackColor = System.Drawing.Color.White;
+            this.txtAltura.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAltura.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(37)))), ((int)(((byte)(58)))));
+            this.txtAltura.Location = new System.Drawing.Point(526, 349);
+            this.txtAltura.Name = "txtAltura";
+            this.txtAltura.Size = new System.Drawing.Size(62, 26);
+            this.txtAltura.TabIndex = 16;
             // 
-            // txtaltura
+            // txtCodigo
             // 
-            this.txtaltura.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.txtCodigo.BackColor = System.Drawing.Color.White;
+            this.txtCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodigo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(37)))), ((int)(((byte)(58)))));
+            this.txtCodigo.Location = new System.Drawing.Point(37, 90);
+            this.txtCodigo.MaxLength = 30;
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(131, 26);
+            this.txtCodigo.TabIndex = 1;
+            // 
+            // txtPesoLiquido
+            // 
+            this.txtPesoLiquido.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtaltura.BackColor = System.Drawing.Color.White;
-            this.txtaltura.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtaltura.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(37)))), ((int)(((byte)(58)))));
-            this.txtaltura.Location = new System.Drawing.Point(526, 349);
-            this.txtaltura.Name = "txtaltura";
-            this.txtaltura.Size = new System.Drawing.Size(62, 26);
-            this.txtaltura.TabIndex = 15;
-            // 
-            // txtcodigo
-            // 
-            this.txtcodigo.BackColor = System.Drawing.Color.White;
-            this.txtcodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtcodigo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(37)))), ((int)(((byte)(58)))));
-            this.txtcodigo.Location = new System.Drawing.Point(37, 90);
-            this.txtcodigo.Name = "txtcodigo";
-            this.txtcodigo.Size = new System.Drawing.Size(168, 26);
-            this.txtcodigo.TabIndex = 1;
-            // 
-            // txtpesoLiquido
-            // 
-            this.txtpesoLiquido.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtpesoLiquido.BackColor = System.Drawing.Color.White;
-            this.txtpesoLiquido.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtpesoLiquido.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(37)))), ((int)(((byte)(58)))));
-            this.txtpesoLiquido.Location = new System.Drawing.Point(271, 349);
-            this.txtpesoLiquido.Name = "txtpesoLiquido";
-            this.txtpesoLiquido.Size = new System.Drawing.Size(62, 26);
-            this.txtpesoLiquido.TabIndex = 12;
+            this.txtPesoLiquido.BackColor = System.Drawing.Color.White;
+            this.txtPesoLiquido.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPesoLiquido.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(37)))), ((int)(((byte)(58)))));
+            this.txtPesoLiquido.Location = new System.Drawing.Point(271, 349);
+            this.txtPesoLiquido.Name = "txtPesoLiquido";
+            this.txtPesoLiquido.Size = new System.Drawing.Size(62, 26);
+            this.txtPesoLiquido.TabIndex = 13;
             // 
             // label5
             // 
@@ -905,7 +944,7 @@
             this.label5.Location = new System.Drawing.Point(34, 391);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(93, 18);
-            this.label5.TabIndex = 68;
+            this.label5.TabIndex = 0;
             this.label5.Text = "Itens p/ caixa";
             // 
             // label31
@@ -932,17 +971,17 @@
             this.label23.TabIndex = 0;
             this.label23.Text = "Condição";
             // 
-            // txtmarca
+            // txtMarca
             // 
-            this.txtmarca.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.txtMarca.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtmarca.BackColor = System.Drawing.Color.White;
-            this.txtmarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtmarca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(37)))), ((int)(((byte)(58)))));
-            this.txtmarca.Location = new System.Drawing.Point(37, 284);
-            this.txtmarca.Name = "txtmarca";
-            this.txtmarca.Size = new System.Drawing.Size(168, 26);
-            this.txtmarca.TabIndex = 7;
+            this.txtMarca.BackColor = System.Drawing.Color.White;
+            this.txtMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMarca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(37)))), ((int)(((byte)(58)))));
+            this.txtMarca.Location = new System.Drawing.Point(37, 284);
+            this.txtMarca.Name = "txtMarca";
+            this.txtMarca.Size = new System.Drawing.Size(168, 26);
+            this.txtMarca.TabIndex = 8;
             // 
             // label8
             // 
@@ -970,18 +1009,6 @@
             this.label36.TabIndex = 0;
             this.label36.Text = "Marca";
             // 
-            // txtdatavalidade
-            // 
-            this.txtdatavalidade.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtdatavalidade.BackColor = System.Drawing.Color.White;
-            this.txtdatavalidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtdatavalidade.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(37)))), ((int)(((byte)(58)))));
-            this.txtdatavalidade.Location = new System.Drawing.Point(505, 284);
-            this.txtdatavalidade.Name = "txtdatavalidade";
-            this.txtdatavalidade.Size = new System.Drawing.Size(168, 26);
-            this.txtdatavalidade.TabIndex = 9;
-            // 
             // label32
             // 
             this.label32.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -995,17 +1022,27 @@
             this.label32.TabIndex = 0;
             this.label32.Text = "Peso líquido";
             // 
-            // txtprofundidade
+            // txtProfundidade
             // 
-            this.txtprofundidade.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.txtProfundidade.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtprofundidade.BackColor = System.Drawing.Color.White;
-            this.txtprofundidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtprofundidade.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(37)))), ((int)(((byte)(58)))));
-            this.txtprofundidade.Location = new System.Drawing.Point(611, 349);
-            this.txtprofundidade.Name = "txtprofundidade";
-            this.txtprofundidade.Size = new System.Drawing.Size(62, 26);
-            this.txtprofundidade.TabIndex = 16;
+            this.txtProfundidade.BackColor = System.Drawing.Color.White;
+            this.txtProfundidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtProfundidade.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(37)))), ((int)(((byte)(58)))));
+            this.txtProfundidade.Location = new System.Drawing.Point(611, 349);
+            this.txtProfundidade.Name = "txtProfundidade";
+            this.txtProfundidade.Size = new System.Drawing.Size(62, 26);
+            this.txtProfundidade.TabIndex = 17;
+            // 
+            // txtProducao
+            // 
+            this.txtProducao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtProducao.Location = new System.Drawing.Point(271, 284);
+            this.txtProducao.Mask = "00/00/0000";
+            this.txtProducao.Name = "txtProducao";
+            this.txtProducao.Size = new System.Drawing.Size(168, 26);
+            this.txtProducao.TabIndex = 9;
+            this.txtProducao.ValidatingType = typeof(System.DateTime);
             // 
             // kryptonPanel1
             // 
@@ -1053,67 +1090,69 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label20;
-        private Krypton.Toolkit.KryptonButton btsalvarMercadoria;
+        private Krypton.Toolkit.KryptonButton btSalvarMercadoria;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.ComboBox txtsituacao;
-        private System.Windows.Forms.ComboBox txtdepartamento;
-        private System.Windows.Forms.TextBox txtcrossdocking;
+        private System.Windows.Forms.ComboBox txtSituacao;
+        private System.Windows.Forms.ComboBox txtDepartamento;
+        private System.Windows.Forms.TextBox txtCrossdocking;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox txtestoqueMaximo;
+        private System.Windows.Forms.TextBox txtEstoqueMaximo;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox txtlocalizacao;
-        private System.Windows.Forms.TextBox txtGtinEan;
+        private System.Windows.Forms.TextBox txtLocalizacao;
+        private System.Windows.Forms.TextBox txtGtin;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txtestoqueMinimo;
+        private System.Windows.Forms.TextBox txtEstoqueMinimo;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.ComboBox txtfretegratis;
+        private System.Windows.Forms.ComboBox txtFreteGratis;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtvarOpcao;
-        private System.Windows.Forms.ComboBox txtformato;
-        private System.Windows.Forms.TextBox txtpesoBruto;
-        private System.Windows.Forms.TextBox txtunidade;
-        private System.Windows.Forms.TextBox txtpesoLiquido;
+        private System.Windows.Forms.TextBox txtVarOpcao;
+        private System.Windows.Forms.ComboBox txtFormato;
+        private System.Windows.Forms.TextBox txtPesoBruto;
+        private System.Windows.Forms.TextBox txtQuantidade;
+        private System.Windows.Forms.TextBox txtPesoLiquido;
         private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.TextBox txtvarAtributo;
-        private System.Windows.Forms.TextBox txtprofundidade;
+        private System.Windows.Forms.TextBox txtVarAtributo;
+        private System.Windows.Forms.TextBox txtProfundidade;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.TextBox txtdatavalidade;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.TextBox txtmarca;
+        private System.Windows.Forms.TextBox txtMarca;
         private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.TextBox txtprecovenda;
+        private System.Windows.Forms.TextBox txtPrecoVenda;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox txtcodigo;
+        private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtaltura;
+        private System.Windows.Forms.TextBox txtAltura;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox txtvolumes;
-        private System.Windows.Forms.TextBox txtlargura;
+        private System.Windows.Forms.TextBox txtLargura;
         private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.TextBox txttipo;
+        private System.Windows.Forms.TextBox txtTipo;
         private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.ComboBox txtunidadeMedida;
+        private System.Windows.Forms.ComboBox txtUnidadeMedida;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox txtproducao;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtitensCaixa;
+        private System.Windows.Forms.TextBox txtItensCaixa;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.ComboBox txtcondicao;
+        private System.Windows.Forms.ComboBox txtCondicao;
         private System.Windows.Forms.Label label35;
         private Krypton.Toolkit.KryptonPanel kryptonPanel1;
         private Krypton.Toolkit.KryptonPanel kryptonPanel2;
         private Krypton.Toolkit.KryptonPanel kryptonPanel3;
+        private System.Windows.Forms.TextBox txtVolume;
+        private System.Windows.Forms.MaskedTextBox txtProducao;
+        private System.Windows.Forms.MaskedTextBox txtDataValidade;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.TextBox txtNome;
     }
 }

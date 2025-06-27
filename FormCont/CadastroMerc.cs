@@ -16,84 +16,106 @@ namespace FormCont
         public CadastroMerc()
         {
             InitializeComponent();
+
+            //Aplicar método de só números inteiros
+            txtCodigo.KeyPress += ApenasNumeros_KeyPress;
+            txtQuantidade.KeyPress += ApenasNumeros_KeyPress;
+            txtVolume.KeyPress += ApenasNumeros_KeyPress;
+            txtGtin.KeyPress += ApenasNumeros_KeyPress;
+            txtEstoqueMinimo.KeyPress += ApenasNumeros_KeyPress;
+            txtEstoqueMaximo.KeyPress += ApenasNumeros_KeyPress;
+            txtItensCaixa.KeyPress += ApenasNumeros_KeyPress;
+
+
+            //Aplicar método de números decimais
+            txtPrecoVenda.KeyPress += ApenasDecimais_KeyPress;
+            txtPesoLiquido.KeyPress += ApenasDecimais_KeyPress;
+            txtPesoBruto.KeyPress += ApenasDecimais_KeyPress;
+            txtAltura.KeyPress += ApenasDecimais_KeyPress;
+            txtLargura.KeyPress += ApenasDecimais_KeyPress;
+            txtProfundidade.KeyPress += ApenasDecimais_KeyPress;
         }
+
+
 
 
         private void btsalvarMercadoria_Click_1(object sender, EventArgs e)
         {
             try
             {
-                if (!txtcodigo.Text.Equals("") && !txtformato.Text.Equals("") && !txttipo.Text.Equals("") &&
-                    !txtprecovenda.Text.Equals("") && !txtunidade.Text.Equals("") && !txtcondicao.Text.Equals("") &&
-                    !txtsituacao.Text.Equals("") && !txtmarca.Text.Equals("") && !txtproducao.Text.Equals("") &&
-                    !txtdatavalidade.Text.Equals("") && !txtfretegratis.Text.Equals("") && !txtvolumes.Text.Equals("") &&
-                    !txtpesoLiquido.Text.Equals("") && !txtpesoBruto.Text.Equals("") && !txtlargura.Text.Equals("") &&
-                    !txtaltura.Text.Equals("") && !txtprofundidade.Text.Equals("") && !txtitensCaixa.Text.Equals("") &&
-                    !txtunidadeMedida.Text.Equals("") && !txtvarAtributo.Text.Equals("") && !txtvarOpcao.Text.Equals("") &&
-                    !txtGtinEan.Text.Equals("") && !txtdepartamento.Text.Equals("") &&
-                    !txtestoqueMinimo.Text.Equals("") && !txtestoqueMaximo.Text.Equals("") && !txtcrossdocking.Text.Equals("") &&
-                    !txtlocalizacao.Text.Equals(""))
+                if (!txtCodigo.Text.Equals("") &&!txtNome.Text.Equals("") && !txtFormato.Text.Equals("") && !txtTipo.Text.Equals("") &&
+                    !txtPrecoVenda.Text.Equals("") && !txtQuantidade.Text.Equals("") && !txtCondicao.Text.Equals("") &&
+                    !txtSituacao.Text.Equals("") && !txtMarca.Text.Equals("") && !txtProducao.Text.Equals("") &&
+                    !txtDataValidade.Text.Equals("") && !txtFreteGratis.Text.Equals("") && !txtVolume.Text.Equals("") &&
+                    !txtPesoLiquido.Text.Equals("") && !txtPesoBruto.Text.Equals("") && !txtLargura.Text.Equals("") &&
+                    !txtAltura.Text.Equals("") && !txtProfundidade.Text.Equals("") && !txtItensCaixa.Text.Equals("") &&
+                    !txtUnidadeMedida.Text.Equals("") && !txtVarAtributo.Text.Equals("") && !txtVarOpcao.Text.Equals("") &&
+                    !txtGtin.Text.Equals("") && !txtDepartamento.Text.Equals("") &&
+                    !txtEstoqueMinimo.Text.Equals("") && !txtEstoqueMaximo.Text.Equals("") && !txtCrossdocking.Text.Equals("") &&
+                    !txtLocalizacao.Text.Equals(""))
                 {
                 Mercadoria cadastrarMerc = new Mercadoria();
-                    cadastrarMerc.Codigo = txtcodigo.Text;
-                    cadastrarMerc.Formato = txtformato.Text;
-                    cadastrarMerc.Tipo = txttipo.Text;
-                    cadastrarMerc.Preco_Venda = txtprecovenda.Text;
-                    cadastrarMerc.Quantidade = int.Parse(txtunidade.Text);
-                    cadastrarMerc.Condicao = txtcondicao.Text;
-                    cadastrarMerc.Situacao = txtsituacao.Text;
-                    cadastrarMerc.Marca = txtmarca.Text;
-                    cadastrarMerc.Producao = txtproducao.Text;
-                    cadastrarMerc.Data_Validade = txtdatavalidade.Text;
-                    cadastrarMerc.Frete_Gratis = txtfretegratis.Text;
-                    cadastrarMerc.Volumes = float.Parse(txtvolumes.Text);
-                    cadastrarMerc.Peso_Liquido = float.Parse(txtpesoLiquido.Text);
-                    cadastrarMerc.Peso_Bruto = float.Parse(txtpesoBruto.Text);
-                    cadastrarMerc.Largura = float.Parse(txtlargura.Text);
-                    cadastrarMerc.Altura = float.Parse(txtaltura.Text);
-                    cadastrarMerc.Profundidade = float.Parse(txtprofundidade.Text);
-                    cadastrarMerc.Itens_Caixa = int.Parse(txtitensCaixa.Text);
-                    cadastrarMerc.Unidade_Medida = txtunidadeMedida.Text;
-                    cadastrarMerc.Variacao_Atributo = txtvarAtributo.Text;
-                    cadastrarMerc.Variacao_Opcao = txtvarOpcao.Text;
-                    cadastrarMerc.GTIN = txtGtinEan.Text;
-                    cadastrarMerc.Departamento = txtdepartamento.Text;
-                    cadastrarMerc.Estoque_Minimo = int.Parse(txtestoqueMinimo.Text);
-                    cadastrarMerc.Estoque_Maximo = int.Parse(txtestoqueMaximo.Text);
-                    cadastrarMerc.Crossdocking = txtcrossdocking.Text;
-                    cadastrarMerc.Localizacao = txtlocalizacao.Text;
+                    cadastrarMerc.Codigo = txtCodigo.Text;
+                    cadastrarMerc.Nome = txtNome.Text;
+                    cadastrarMerc.Formato = txtFormato.Text;
+                    cadastrarMerc.Tipo = txtTipo.Text;
+                    cadastrarMerc.Preco_Venda = float.Parse(txtPrecoVenda.Text);
+                    cadastrarMerc.Quantidade = int.Parse(txtQuantidade.Text);
+                    cadastrarMerc.Condicao = txtCondicao.Text;
+                    cadastrarMerc.Situacao = txtSituacao.Text;
+                    cadastrarMerc.Marca = txtMarca.Text;
+                    cadastrarMerc.Producao = txtProducao.Text;
+                    cadastrarMerc.Data_Validade = txtDataValidade.Text;
+                    cadastrarMerc.Frete_Gratis = txtFreteGratis.Text;
+                    cadastrarMerc.Volumes = float.Parse(txtVolume.Text);
+                    cadastrarMerc.Peso_Liquido = float.Parse(txtPesoLiquido.Text);
+                    cadastrarMerc.Peso_Bruto = float.Parse(txtPesoBruto.Text);
+                    cadastrarMerc.Largura = float.Parse(txtLargura.Text);
+                    cadastrarMerc.Altura = float.Parse(txtAltura.Text);
+                    cadastrarMerc.Profundidade = float.Parse(txtProfundidade.Text);
+                    cadastrarMerc.Itens_Caixa = int.Parse(txtItensCaixa.Text);
+                    cadastrarMerc.Unidade_Medida = txtUnidadeMedida.Text;
+                    cadastrarMerc.Variacao_Atributo = txtVarAtributo.Text;
+                    cadastrarMerc.Variacao_Opcao = txtVarOpcao.Text;
+                    cadastrarMerc.GTIN = txtGtin.Text;
+                    cadastrarMerc.Departamento = txtDepartamento.Text;
+                    cadastrarMerc.Estoque_Minimo = int.Parse(txtEstoqueMinimo.Text);
+                    cadastrarMerc.Estoque_Maximo = int.Parse(txtEstoqueMaximo.Text);
+                    cadastrarMerc.Crossdocking = txtCrossdocking.Text;
+                    cadastrarMerc.Localizacao = txtLocalizacao.Text;
 
                     if (cadastrarMerc.cadastrarMercadoria())
                     {
                         MessageBox.Show($"Mercadoria cadastrada com sucesso!");
 
-                        txtcodigo.Clear();
-                        txtformato.SelectedIndex = -1;
-                        txttipo.Clear();
-                        txtprecovenda.Clear();
-                        txtunidade.Clear();
-                        txtcondicao.SelectedIndex = -1;
-                        txtsituacao.SelectedIndex = -1;
-                        txtmarca.Clear();
-                        txtproducao.SelectedIndex = -1;
-                        txtdatavalidade.Clear();
-                        txtfretegratis.SelectedIndex = -1;
-                        txtvolumes.SelectedIndex = -1;
-                        txtpesoLiquido.Clear();
-                        txtpesoBruto.Clear();
-                        txtlargura.Clear();
-                        txtaltura.Clear();
-                        txtprofundidade.Clear();
-                        txtitensCaixa.Clear();
-                        txtunidadeMedida.SelectedIndex = -1;
-                        txtvarAtributo.Clear();
-                        txtvarOpcao.Clear();
-                        txtGtinEan.Clear();
-                        txtdepartamento.SelectedIndex = -1;
-                        txtestoqueMinimo.Clear();
-                        txtestoqueMaximo.Clear();
-                        txtcrossdocking.Clear();
-                        txtlocalizacao.Clear();
+                        txtCodigo.Clear();
+                        txtNome.Clear();
+                        txtFormato.SelectedIndex = -1;
+                        txtTipo.Clear();
+                        txtPrecoVenda.Clear();
+                        txtQuantidade.Clear();
+                        txtCondicao.SelectedIndex = -1;
+                        txtSituacao.SelectedIndex = -1;
+                        txtMarca.Clear();
+                        txtProducao.Clear();
+                        txtDataValidade.Clear();
+                        txtFreteGratis.SelectedIndex = -1;
+                        txtVolume.Clear();
+                        txtPesoLiquido.Clear();
+                        txtPesoBruto.Clear();
+                        txtLargura.Clear();
+                        txtAltura.Clear();
+                        txtProfundidade.Clear();
+                        txtItensCaixa.Clear();
+                        txtUnidadeMedida.SelectedIndex = -1;
+                        txtVarAtributo.Clear();
+                        txtVarOpcao.Clear();
+                        txtGtin.Clear();
+                        txtDepartamento.SelectedIndex = -1;
+                        txtEstoqueMinimo.Clear();
+                        txtEstoqueMaximo.Clear();
+                        txtCrossdocking.Clear();
+                        txtLocalizacao.Clear();
                     }
                     else
                     {
@@ -112,22 +134,40 @@ namespace FormCont
 
         }
 
-        private void btsalvarMercadoria_Click(object sender, EventArgs e)
+
+        //Máscara número inteiro
+        private void ApenasNumeros_KeyPress(object sender, KeyPressEventArgs e)
         {
-            
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
+        //Máscara número decimal
+        private void ApenasDecimais_KeyPress(object sender, KeyPressEventArgs e)
         {
+            TextBox txt = sender as TextBox;
 
-        }
+            // Permitir números, vírgula, ponto e backspace
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+                e.KeyChar != ',')
+            {
+                e.Handled = true;
+            }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
+            // Impede mais de uma vírgula ou ponto
+            if ((e.KeyChar == ',') &&
+                (txt.Text.Contains(",")))
+            {
+                e.Handled = true;
+            }
         }
 
         
+
+
+
     }
 
 }

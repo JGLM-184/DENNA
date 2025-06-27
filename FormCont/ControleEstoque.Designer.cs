@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ControleEstoque));
             this.labelTitulo = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -57,10 +57,6 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.txtBarraPesquisa = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.filtro_tipoOrigem = new System.Windows.Forms.ComboBox();
-            this.filtroTipo = new System.Windows.Forms.ComboBox();
             this.tabelaMercadorias = new System.Windows.Forms.DataGridView();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
@@ -69,6 +65,7 @@
             this.btDeletar = new Krypton.Toolkit.KryptonButton();
             this.btBuscarMerc = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btLimpar = new Krypton.Toolkit.KryptonButton();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -329,7 +326,7 @@
             this.txtBarraPesquisa.BackColor = System.Drawing.Color.White;
             this.txtBarraPesquisa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBarraPesquisa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtBarraPesquisa.Location = new System.Drawing.Point(25, 111);
+            this.txtBarraPesquisa.Location = new System.Drawing.Point(26, 121);
             this.txtBarraPesquisa.Name = "txtBarraPesquisa";
             this.txtBarraPesquisa.Size = new System.Drawing.Size(423, 26);
             this.txtBarraPesquisa.TabIndex = 1;
@@ -339,107 +336,48 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(37)))), ((int)(((byte)(58)))));
-            this.label7.Location = new System.Drawing.Point(21, 84);
+            this.label7.Location = new System.Drawing.Point(22, 94);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(193, 24);
+            this.label7.Size = new System.Drawing.Size(197, 24);
             this.label7.TabIndex = 0;
-            this.label7.Text = "Pesquisar mercadoria";
-            // 
-            // label12
-            // 
-            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(37)))), ((int)(((byte)(58)))));
-            this.label12.Location = new System.Drawing.Point(733, 80);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(59, 20);
-            this.label12.TabIndex = 52;
-            this.label12.Text = "Filtro B";
-            // 
-            // label8
-            // 
-            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(37)))), ((int)(((byte)(58)))));
-            this.label8.Location = new System.Drawing.Point(595, 80);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(59, 20);
-            this.label8.TabIndex = 51;
-            this.label8.Text = "Filtro A";
-            // 
-            // filtro_tipoOrigem
-            // 
-            this.filtro_tipoOrigem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.filtro_tipoOrigem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.filtro_tipoOrigem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.filtro_tipoOrigem.FormattingEnabled = true;
-            this.filtro_tipoOrigem.Items.AddRange(new object[] {
-            "Todos",
-            "Notas fiscais",
-            "Vendas",
-            "Compras",
-            "Transferência",
-            "Sem origem",
-            "Origem excluída"});
-            this.filtro_tipoOrigem.Location = new System.Drawing.Point(738, 111);
-            this.filtro_tipoOrigem.Name = "filtro_tipoOrigem";
-            this.filtro_tipoOrigem.Size = new System.Drawing.Size(132, 28);
-            this.filtro_tipoOrigem.TabIndex = 4;
-            // 
-            // filtroTipo
-            // 
-            this.filtroTipo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.filtroTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.filtroTipo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.filtroTipo.FormattingEnabled = true;
-            this.filtroTipo.Items.AddRange(new object[] {
-            "Todos",
-            "Entrada",
-            "Saída",
-            "Balanço"});
-            this.filtroTipo.Location = new System.Drawing.Point(600, 111);
-            this.filtroTipo.Name = "filtroTipo";
-            this.filtroTipo.Size = new System.Drawing.Size(132, 28);
-            this.filtroTipo.TabIndex = 3;
+            this.label7.Text = "Código da mercadoria";
             // 
             // tabelaMercadorias
             // 
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
-            this.tabelaMercadorias.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tabelaMercadorias.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.tabelaMercadorias.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tabelaMercadorias.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.tabelaMercadorias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.tabelaMercadorias.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.tabelaMercadorias.DefaultCellStyle = dataGridViewCellStyle3;
             this.tabelaMercadorias.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.tabelaMercadorias.Location = new System.Drawing.Point(0, 235);
             this.tabelaMercadorias.Name = "tabelaMercadorias";
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tabelaMercadorias.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.Black;
-            this.tabelaMercadorias.RowsDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tabelaMercadorias.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            this.tabelaMercadorias.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.tabelaMercadorias.Size = new System.Drawing.Size(1200, 553);
             this.tabelaMercadorias.TabIndex = 5;
             // 
@@ -456,7 +394,7 @@
             // btBuscarMercFull
             // 
             this.btBuscarMercFull.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btBuscarMercFull.Location = new System.Drawing.Point(941, 100);
+            this.btBuscarMercFull.Location = new System.Drawing.Point(564, 109);
             this.btBuscarMercFull.Name = "btBuscarMercFull";
             this.btBuscarMercFull.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.btBuscarMercFull.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
@@ -468,7 +406,7 @@
             this.btBuscarMercFull.OverrideDefault.Border.Rounding = 20F;
             this.btBuscarMercFull.OverrideDefault.Border.Width = 1;
             this.btBuscarMercFull.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.btBuscarMercFull.Size = new System.Drawing.Size(48, 47);
+            this.btBuscarMercFull.Size = new System.Drawing.Size(53, 50);
             this.btBuscarMercFull.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.btBuscarMercFull.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
             this.btBuscarMercFull.StateCommon.Back.ColorAngle = 45F;
@@ -507,7 +445,7 @@
             // btEditar
             // 
             this.btEditar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btEditar.Location = new System.Drawing.Point(1012, 100);
+            this.btEditar.Location = new System.Drawing.Point(626, 109);
             this.btEditar.Name = "btEditar";
             this.btEditar.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.btEditar.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
@@ -519,7 +457,7 @@
             this.btEditar.OverrideDefault.Border.Rounding = 20F;
             this.btEditar.OverrideDefault.Border.Width = 1;
             this.btEditar.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.btEditar.Size = new System.Drawing.Size(48, 47);
+            this.btEditar.Size = new System.Drawing.Size(53, 50);
             this.btEditar.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.btEditar.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
             this.btEditar.StateCommon.Back.ColorAngle = 45F;
@@ -558,7 +496,7 @@
             // btDeletar
             // 
             this.btDeletar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btDeletar.Location = new System.Drawing.Point(1140, 100);
+            this.btDeletar.Location = new System.Drawing.Point(1099, 106);
             this.btDeletar.Name = "btDeletar";
             this.btDeletar.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
             this.btDeletar.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
@@ -570,7 +508,7 @@
             this.btDeletar.OverrideDefault.Border.Rounding = 20F;
             this.btDeletar.OverrideDefault.Border.Width = 1;
             this.btDeletar.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.btDeletar.Size = new System.Drawing.Size(48, 47);
+            this.btDeletar.Size = new System.Drawing.Size(53, 50);
             this.btDeletar.StateCommon.Back.Color1 = System.Drawing.Color.Red;
             this.btDeletar.StateCommon.Back.Color2 = System.Drawing.Color.Red;
             this.btDeletar.StateCommon.Back.ColorAngle = 45F;
@@ -609,7 +547,7 @@
             // btBuscarMerc
             // 
             this.btBuscarMerc.Image = ((System.Drawing.Image)(resources.GetObject("btBuscarMerc.Image")));
-            this.btBuscarMerc.Location = new System.Drawing.Point(454, 106);
+            this.btBuscarMerc.Location = new System.Drawing.Point(455, 116);
             this.btBuscarMerc.Name = "btBuscarMerc";
             this.btBuscarMerc.Size = new System.Drawing.Size(41, 36);
             this.btBuscarMerc.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -619,7 +557,7 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.filtroTipo);
+            this.panel2.Controls.Add(this.btLimpar);
             this.panel2.Controls.Add(this.btBuscarMerc);
             this.panel2.Controls.Add(this.labelTitulo);
             this.panel2.Controls.Add(this.btDeletar);
@@ -627,15 +565,63 @@
             this.panel2.Controls.Add(this.btEditar);
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.btBuscarMercFull);
-            this.panel2.Controls.Add(this.filtro_tipoOrigem);
             this.panel2.Controls.Add(this.panel1);
-            this.panel2.Controls.Add(this.label8);
-            this.panel2.Controls.Add(this.label12);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1200, 184);
             this.panel2.TabIndex = 80;
+            // 
+            // btLimpar
+            // 
+            this.btLimpar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btLimpar.Location = new System.Drawing.Point(720, 109);
+            this.btLimpar.Name = "btLimpar";
+            this.btLimpar.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.btLimpar.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.btLimpar.OverrideDefault.Back.ColorAngle = 45F;
+            this.btLimpar.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.btLimpar.OverrideDefault.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.btLimpar.OverrideDefault.Border.ColorAngle = 45F;
+            this.btLimpar.OverrideDefault.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btLimpar.OverrideDefault.Border.Rounding = 20F;
+            this.btLimpar.OverrideDefault.Border.Width = 1;
+            this.btLimpar.PaletteMode = Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            this.btLimpar.Size = new System.Drawing.Size(53, 50);
+            this.btLimpar.StateCommon.Back.Color1 = System.Drawing.Color.DarkBlue;
+            this.btLimpar.StateCommon.Back.Color2 = System.Drawing.Color.DarkBlue;
+            this.btLimpar.StateCommon.Back.ColorAngle = 45F;
+            this.btLimpar.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.btLimpar.StateCommon.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.btLimpar.StateCommon.Border.ColorAngle = 45F;
+            this.btLimpar.StateCommon.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btLimpar.StateCommon.Border.Rounding = 20F;
+            this.btLimpar.StateCommon.Border.Width = 1;
+            this.btLimpar.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.btLimpar.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
+            this.btLimpar.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btLimpar.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
+            this.btLimpar.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            this.btLimpar.StatePressed.Back.ColorAngle = 135F;
+            this.btLimpar.StatePressed.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(145)))), ((int)(((byte)(198)))));
+            this.btLimpar.StatePressed.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(121)))), ((int)(((byte)(206)))));
+            this.btLimpar.StatePressed.Border.ColorAngle = 135F;
+            this.btLimpar.StatePressed.Border.Rounding = 20F;
+            this.btLimpar.StatePressed.Border.Width = 1;
+            this.btLimpar.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.btLimpar.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.btLimpar.StateTracking.Back.ColorAngle = 45F;
+            this.btLimpar.StateTracking.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(174)))), ((int)(((byte)(244)))));
+            this.btLimpar.StateTracking.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(142)))), ((int)(((byte)(254)))));
+            this.btLimpar.StateTracking.Border.ColorAngle = 45F;
+            this.btLimpar.StateTracking.Border.GraphicsHint = Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
+            this.btLimpar.StateTracking.Border.Rounding = 20F;
+            this.btLimpar.StateTracking.Border.Width = 1;
+            this.btLimpar.TabIndex = 81;
+            this.btLimpar.Values.DropDownArrowColor = System.Drawing.Color.Empty;
+            this.btLimpar.Values.Image = ((System.Drawing.Image)(resources.GetObject("btLimpar.Values.Image")));
+            this.btLimpar.Values.Text = "";
+            this.btLimpar.Click += new System.EventHandler(this.btLimpar_Click);
             // 
             // ControleEstoque
             // 
@@ -694,10 +680,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.DataGridView tabelaMercadorias;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox filtro_tipoOrigem;
-        private System.Windows.Forms.ComboBox filtroTipo;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Panel panel1;
         private Krypton.Toolkit.KryptonButton btBuscarMercFull;
@@ -705,5 +687,6 @@
         private Krypton.Toolkit.KryptonButton btDeletar;
         private System.Windows.Forms.PictureBox btBuscarMerc;
         private System.Windows.Forms.Panel panel2;
+        private Krypton.Toolkit.KryptonButton btLimpar;
     }
 }
