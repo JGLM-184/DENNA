@@ -21,7 +21,7 @@ namespace FormCont
 
 
         //altera a cor de fundo do formulário container/menu para a cor branca
-        public Container()
+        public Container(string nomeUsuario)
         {
             InitializeComponent();
             foreach (Control control in this.Controls)
@@ -32,6 +32,9 @@ namespace FormCont
                     break;
                 }
             }
+
+            //Definindo o nome do usuário
+            lblUsuario.Text = $"Olá, {nomeUsuario}!";   
         }
 
         //inicializar Cadastro de Mercadorias
@@ -119,6 +122,18 @@ namespace FormCont
 
         private void bt_deslogar_Click_1(object sender, EventArgs e)
         {
+            var confirmar = MessageBox.Show("Deseja realmente sair?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (confirmar == DialogResult.Yes)
+            {
+                DeslogarEFechar();
+            }
+        }
+
+        private void DeslogarEFechar()
+        {
+            Sessao.Limpar();
+            this.Close();
 
         }
 
@@ -148,6 +163,14 @@ namespace FormCont
             curva = null;
         }
 
+        private void kryptonPictureBox1_Click(object sender, EventArgs e)
+        {
 
+        }
+
+        private void lblUsuario_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

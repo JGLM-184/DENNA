@@ -103,6 +103,16 @@ namespace FormCont.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap adm {
+            get {
+                object obj = ResourceManager.GetObject("adm", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Borda_para_botão___PNG {
             get {
                 object obj = ResourceManager.GetObject("Borda para botão - PNG", resourceCulture);
