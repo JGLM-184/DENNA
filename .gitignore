@@ -1,0 +1,44 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build
+bin/
+obj/
+
+# Pacotes NuGet
+packages/
+*.nupkg
+*.snupkg
+
+# Logs e temporários
+TestResults/
+*.log
+*.tmp
+
+# Outros
+*.cache
+*.ilk
+*.meta
+*.pdb
+*.idb
+*.class
+*.psess
+*.vsp
+*.vspx
+_ReSharper*/
+*.DotSettings.user
+
+# Rider IDE
+.idea/
+
+# Publish outputs
+publish/
+
+# Arquivos gerados por Windows
+Thumbs.db
+Desktop.ini
+
